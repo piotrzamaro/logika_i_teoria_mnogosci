@@ -1,0 +1,3 @@
+# Wstęp {.unnumbered}
+
+e-book ten stanowi wprowadzenie do zagadnień z zakresu logiki matematycznej oraz teorii mnogości. Logika, będąca podstawą matematycznego rozumowania, pozwala analizować związki między zdaniami, formułować wnioski oraz rozwiązywać problemy za pomocą precyzyjnych narzędzi, takich jak rachunek zdań i kwantyfikatorów. Teoria mnogości z kolei opisuje struktury zbiorów, które są fundamentem współczesnej matematyki. Dokument ma na celu przystępne omówienie pojęć, technik i metod logicznych, z przykładami i ćwiczeniami, które pomogą w zrozumieniu tych abstrakcyjnych pojęć oraz ich zastosowań w praktyce.

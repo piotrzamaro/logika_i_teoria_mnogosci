@@ -1,0 +1,49 @@
+project:
+  type: book
+
+book:
+  title: "PODSTAWY LOGIKI I TEORII MNOGOŚCI"
+  subtitle: "Praktyczne vademecum po metodach analitycznych stosowanych w HTA" 
+  date: "`r format(Sys.time(), '%d %B, %Y')`"
+  favicon: logo.png
+  twitter-card: true
+  search: true
+  repo-url: https://github.com/jjallaire/hopr/
+  sharing: [twitter, facebook]
+  downloads: [pdf, epub, docx]
+  sidebar:
+    left:
+      toc: true
+    right:
+      table-of-contents: true
+      tools:
+      - icon: github
+        href: https://github.com  
+    search: true
+
+  author:
+    - name: "mgr Piotr Zamaro"
+    - name: "Wydział Matematyki i Informatyki"
+      affiliation: "zamaro@outlook.com"
+      image: logo.png
+
+  chapters:
+    - index.qmd
+    - 00_wprowadzenie.qmd
+    - 01_klasyczny_rachunek_zdań.qmd
+    - summary.qmd
+    - references.qmd
+
+lang: "pl"
+bibliography: references.bib
+highlight-style: pygments
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+output-dir: docs
+
+editor: visual
+

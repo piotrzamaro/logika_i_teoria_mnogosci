@@ -1,0 +1,393 @@
+# Klasyczny Rachunek Zdań {.unnumbered}
+
+<br>
+
+Klasyczny rachunek zdań to dział logiki, który bada związki pomiędzy zdaniami logicznymi oraz analizuje ich wartości logiczne przy użyciu spójników. W tej części przyjrzymy się definicjom spójników logicznych, formułom logicznym, tautologiom, podstawowym prawom logiki oraz metodom upraszczania formuł logicznych.
+
+
+### **Spójniki logiczne: definicje, przykłady, tabele prawdy**
+
+Spójniki logiczne to operatory łączące zdania logiczne, które pozwalają na budowanie złożonych wyrażeń. Poniżej opisane są najważniejsze spójniki wraz z ich definicjami, przykładami i tabelami prawdy.
+
+#### 1. **Negacja (¬)**
+
+Negacja zmienia wartość logiczną zdania na przeciwną.
+
+- **Definicja**: Jeśli zdanie \( A \) jest prawdziwe, to negacja \( ¬A \) jest fałszywa, i odwrotnie.
+  
+- **Przykład**: Jeśli \( A \) oznacza "Pada deszcz", to \( ¬A \) oznacza "Nie pada deszcz".
+
+| A    | ¬A   |
+|------|------|
+| P    | F    |
+| F    | P    |
+
+#### 2. **Koniunkcja (∧)**
+
+Koniunkcja oznacza "i" i łączy dwa zdania. Zdanie złożone jest prawdziwe tylko wtedy, gdy oba zdania są prawdziwe.
+
+- **Definicja**: \( A ∧ B \) jest prawdziwe, jeśli \( A \) i \( B \) są prawdziwe.
+  
+- **Przykład**: "Pada deszcz" i "Wieje wiatr" – zdanie złożone jest prawdziwe tylko wtedy, gdy oba zdania są prawdziwe.
+
+| A    | B    | A ∧ B |
+|------|------|-------|
+| P    | P    | P     |
+| P    | F    | F     |
+| F    | P    | F     |
+| F    | F    | F     |
+
+#### 3. **Alternatywa (∨)**
+
+Alternatywa oznacza "lub" i jest prawdziwa, gdy co najmniej jedno ze zdań jest prawdziwe.
+
+- **Definicja**: \( A ∨ B \) jest prawdziwe, jeśli \( A \) lub \( B \) jest prawdziwe.
+  
+- **Przykład**: "Pada deszcz" lub "Wieje wiatr" – zdanie jest prawdziwe, jeśli pada deszcz, wieje wiatr, albo oba zdania są prawdziwe.
+
+| A    | B    | A ∨ B |
+|------|------|-------|
+| P    | P    | P     |
+| P    | F    | P     |
+| F    | P    | P     |
+| F    | F    | F     |
+
+#### 4. **Implikacja (→)**
+
+Implicacja wyraża "jeśli... to...". Jest fałszywa tylko wtedy, gdy \( A \) jest prawdziwe, a \( B \) fałszywe.
+
+- **Definicja**: \( A → B \) jest fałszywe tylko, gdy \( A \) jest prawdziwe, a \( B \) fałszywe.
+  
+- **Przykład**: "Jeśli pada deszcz, to wieje wiatr" – jest fałszywe, gdy pada deszcz, ale nie wieje wiatr.
+
+| A    | B    | A → B |
+|------|------|-------|
+| P    | P    | P     |
+| P    | F    | F     |
+| F    | P    | P     |
+| F    | F    | P     |
+
+#### 5. **Równoważność (↔)**
+
+Równoważność oznacza, że oba zdania mają tę samą wartość logiczną – są albo oba prawdziwe, albo oba fałszywe.
+
+- **Definicja**: \( A ↔ B \) jest prawdziwe, gdy \( A \) i \( B \) mają tę samą wartość logiczną.
+  
+- **Przykład**: "Pada deszcz wtedy i tylko wtedy, gdy wieje wiatr" – zdanie prawdziwe, jeśli obie części są prawdziwe lub obie są fałszywe.
+
+| A    | B    | A ↔ B |
+|------|------|-------|
+| P    | P    | P     |
+| P    | F    | F     |
+| F    | P    | F     |
+| F    | F    | P     |
+
+---
+
+### **Formuły logiczne**
+
+**Formuła logiczna** to wyrażenie utworzone z jednej lub więcej zmiennych logicznych (zdań) oraz spójników logicznych. Każda formuła może mieć przypisaną wartość logiczną – prawda (P) lub fałsz (F) – w zależności od wartości logicznych zdań prostych, które ją tworzą.
+
+#### **Rodzaje formuł**:
+1. **Proste formuły logiczne**: Są to pojedyncze zdania logiczne, np. \( A \), \( B \).
+   
+2. **Złożone formuły logiczne**: Powstają przez połączenie zdań prostych za pomocą spójników logicznych, np. \( A ∧ B \), \( A → B \).
+
+---
+
+### **Tautologie**
+
+**Tautologia** to formuła logiczna, która jest zawsze prawdziwa, niezależnie od wartości logicznych zmiennych, które ją tworzą.
+
+#### Przykłady tautologii:
+
+1. **Prawo wyłączonego środka**:
+   $$ A ∨ ¬A $$
+   Znaczy to, że zdanie \( A \) jest albo prawdziwe, albo jego zaprzeczenie jest prawdziwe – co zawsze będzie prawdą.
+
+2. **Prawo podwójnej implikacji**:
+   $$ (A → B) ∨ (B → A) $$
+   Oznacza to, że jedno z dwóch zdań logicznych będzie prowadziło do drugiego.
+
+---
+
+### **Ważniejsze prawa klasycznego rachunku zdań**
+
+#### 1. **Prawo De Morgana**
+
+Prawa te dotyczą negacji złożeń zdań:
+
+- **Pierwsze prawo De Morgana**:
+  $$ ¬(A ∧ B) ≡ (¬A ∨ ¬B) $$
+  
+- **Drugie prawo De Morgana**:
+  $$ ¬(A ∨ B) ≡ (¬A ∧ ¬B) $$
+
+#### 2. **Prawo podwójnej negacji**
+
+Negacja negacji zdania jest równoważna samemu zdaniu:
+$$ ¬(¬A) ≡ A $$
+
+#### 3. **Prawo rozdzielności**
+
+Dotyczy rozdzielania operatorów logicznych na formuły:
+- Koniunkcja rozdziela się względem alternatywy:
+  $$ A ∧ (B ∨ C) ≡ (A ∧ B) ∨ (A ∧ C) $$
+  
+- Alternatywa rozdziela się względem koniunkcji:
+  $$ A ∨ (B ∧ C) ≡ (A ∨ B) ∧ (A ∨ C) $$
+
+#### 4. **Prawo kontrapozycji**
+
+Kontrapozycja oznacza, że implikacja i jej odwrotna implikacja z negacją są równoważne:
+$$ (A → B) ≡ (¬B → ¬A) $$
+
+---
+
+### **Postać APN (Alternatywna Postać Normalna) i KPN (Koniunkcyjna Postać Normalna)**
+
+**Postać normalna** to sposób przedstawienia formuł logicznych w uporządkowanej formie.
+
+#### **Alternatywna Postać Normalna (APN)**
+
+- Formuła jest w postaci alternatywy koniunkcji (suma iloczynów).
+- Przykład: \( (A ∧ B) ∨ (¬A ∧ C) \)
+
+#### **Koniunkcyjna Postać Normalna (KPN)**
+
+- Formuła jest w postaci koniunkcji alternatyw (iloczyn sum).
+- Przykład: \( (A ∨ B) ∧ (¬A ∨ C) \)
+
+**Krok po kroku – jak przekształcić formułę do APN lub KPN**:
+
+1. **Usunięcie implikacji i równoważności**.
+2. **Stosowanie praw De Morgana**.
+3. **Rozdzielenie operatorów logicznych**.
+
+---
+
+### **Metoda tablic analitycznych**
+
+**Metoda tablic analitycznych** to narzędzie do analizy formuł logicznych, które pozwala sprawdzić, czy dana formuła jest tautologią, sprzeczna lub spełnialna. D
+
+ziała poprzez systematyczne sprawdzanie możliwych wartości logicznych dla zdań w formule.
+
+#### Kroki w metodzie tablic analitycznych:
+
+1. **Rozbij formułę na alternatywy i koniunkcje**.
+2. **Tworzenie drzewa**: Każda formuła dzieli się na gałęzie drzewa reprezentujące możliwe wartości logiczne.
+3. **Ocena**: Jeśli wszystkie gałęzie drzewa prowadzą do prawdziwości formuły, formuła jest tautologią.
+
+#### **Przykład**:
+
+Dla formuły \( A ∧ (A → B) \), stosujemy metodę tablic:
+
+1. Tworzymy drzewo możliwości dla \( A \) i \( B \).
+2. Sprawdzamy, czy formuła jest spełniona we wszystkich przypadkach.
+
+
+Oto przykłady zadań z klasycznego rachunku zdań wraz z opisem krok po kroku, jak je rozwiązać.
+
+
+
+## Zadania
+
+### **Zadanie 1: Tabele prawdy dla formuły złożonej**
+
+#### Treść zadania:
+Zbuduj tabelę prawdy dla formuły logicznej:  
+$$ (A ∨ B) ∧ ¬C $$
+
+#### Jak rozwiązać:
+
+1. **Wypisz wszystkie możliwe wartości logiczne dla zdań \( A \), \( B \) i \( C \)**:
+   Ponieważ każde zdanie może być prawdziwe (P) lub fałszywe (F), łączna liczba kombinacji wynosi \( 2^3 = 8 \). 
+
+| A    | B    | C    |
+|------|------|------|
+| P    | P    | P    |
+| P    | P    | F    |
+| P    | F    | P    |
+| P    | F    | F    |
+| F    | P    | P    |
+| F    | P    | F    |
+| F    | F    | P    |
+| F    | F    | F    |
+
+2. **Oblicz wartość logiczną alternatywy \( A ∨ B \)**:
+   Alternatywa jest prawdziwa, gdy co najmniej jedno zdanie jest prawdziwe.
+
+| A    | B    | C    | A ∨ B |
+|------|------|------|-------|
+| P    | P    | P    | P     |
+| P    | P    | F    | P     |
+| P    | F    | P    | P     |
+| P    | F    | F    | P     |
+| F    | P    | P    | P     |
+| F    | P    | F    | P     |
+| F    | F    | P    | F     |
+| F    | F    | F    | F     |
+
+3. **Oblicz wartość logiczną negacji \( ¬C \)**:
+   Negacja zmienia wartość logiczną zdania \( C \) na przeciwną.
+
+| A    | B    | C    | A ∨ B | ¬C   |
+|------|------|------|-------|------|
+| P    | P    | P    | P     | F    |
+| P    | P    | F    | P     | P    |
+| P    | F    | P    | P     | F    |
+| P    | F    | F    | P     | P    |
+| F    | P    | P    | P     | F    |
+| F    | P    | F    | P     | P    |
+| F    | F    | P    | F     | F    |
+| F    | F    | F    | F     | P    |
+
+4. **Oblicz wartość logiczną koniunkcji \( (A ∨ B) ∧ ¬C \)**:
+   Koniunkcja jest prawdziwa tylko wtedy, gdy oba zdania są prawdziwe.
+
+| A    | B    | C    | A ∨ B | ¬C   | (A ∨ B) ∧ ¬C |
+|------|------|------|-------|------|--------------|
+| P    | P    | P    | P     | F    | F            |
+| P    | P    | F    | P     | P    | P            |
+| P    | F    | P    | P     | F    | F            |
+| P    | F    | F    | P     | P    | P            |
+| F    | P    | P    | P     | F    | F            |
+| F    | P    | F    | P     | P    | P            |
+| F    | F    | P    | F     | F    | F            |
+| F    | F    | F    | F     | P    | F            |
+
+#### Wynik:
+Tabela prawdy dla formuły \( (A ∨ B) ∧ ¬C \) pokazuje, że formuła jest prawdziwa w wierszach 2, 4 i 6.
+
+---
+
+### **Zadanie 2: Przekształcenie formuły do alternatywnej postaci normalnej (APN)**
+
+#### Treść zadania:
+Przekształć formułę:  
+$$ ¬(A ∧ B) ∨ (C ∧ ¬D) $$  
+do alternatywnej postaci normalnej (APN).
+
+#### Jak rozwiązać:
+
+1. **Rozpocznij od zastosowania praw De Morgana do negacji \( ¬(A ∧ B) \)**:
+   Zastosowanie prawa De Morgana zmienia koniunkcję na alternatywę:
+   $$ ¬(A ∧ B) ≡ (¬A ∨ ¬B) $$
+
+   Formuła przyjmuje postać:
+   $$ (¬A ∨ ¬B) ∨ (C ∧ ¬D) $$
+
+2. **Rozdziel alternatywę względem koniunkcji (prawo rozdzielności)**:
+   Rozdziel alternatywę \( (¬A ∨ ¬B) \) względem \( C ∧ ¬D \):
+   $$ (¬A ∨ ¬B) ∨ (C ∧ ¬D) ≡ (¬A ∨ ¬B ∨ C) ∧ (¬A ∨ ¬B ∨ ¬D) $$
+
+3. **Wynik**:
+   Formuła w alternatywnej postaci normalnej (APN) to:
+   $$ (¬A ∨ ¬B ∨ C) ∧ (¬A ∨ ¬B ∨ ¬D) $$
+
+---
+
+### **Zadanie 3: Sprawdzenie, czy formuła jest tautologią, używając metody tablic analitycznych**
+
+#### Treść zadania:
+Sprawdź, czy formuła:  
+$$ (A → B) ∨ (B → A) $$  
+jest tautologią, używając metody tablic analitycznych.
+
+#### Jak rozwiązać:
+
+1. **Rozpocznij od zapisu formuły w postaci bez implikacji**:
+   Zastąp implikację równoważną formą:
+   - \( A → B \equiv ¬A ∨ B \)
+   - \( B → A \equiv ¬B ∨ A \)
+
+   Formuła przyjmuje postać:
+   $$ (¬A ∨ B) ∨ (¬B ∨ A) $$
+
+2. **Podziel formułę na alternatywy**:
+   Zauważ, że mamy dwie alternatywy, które można podzielić:
+   - \( ¬A \)
+   - \( B \)
+   - \( ¬B \)
+   - \( A \)
+
+3. **Tworzenie gałęzi w metodzie tablic analitycznych**:
+   Teraz rozważ możliwe wartości logiczne zmiennych \( A \) i \( B \). Twórz gałęzie drzewa dla każdego przypadku:
+
+   - \( A = P \), \( B = P \): Formuła \( (¬A ∨ B) ∨ (¬B ∨ A) \) przyjmuje wartość P.
+   - \( A = P \), \( B = F \): Formuła przyjmuje wartość P.
+   - \( A = F \), \( B = P \): Formuła przyjmuje wartość P.
+   - \( A = F \), \( B = F \): Formuła przyjmuje wartość P.
+
+4. **Wynik**:
+   Każda z gałęzi prowadzi do wartości prawdziwej, więc formuła \( (A → B) ∨ (B → A) \) jest **tautologią**.
+
+---
+
+### **Zadanie 4: Znalezienie koniunkcyjnej postaci normalnej (KPN)**
+
+#### Treść zadania:
+Przekształć formułę:  
+$$ ¬(A ∨ B) ∧ (C ∨ D) $$  
+do koniunkcyjnej postaci normalnej (KPN).
+
+#### Jak rozwiązać:
+
+1. **Zastosuj prawo De Morgana do negacji \( ¬(A ∨ B) \)**:
+   Zmieniamy alternatywę na koniunkcję:
+   $$ ¬(A ∨ B) ≡ (¬A ∧ ¬B) $$
+
+   Formuła przyjmuje postać:
+   $$ (¬A ∧ ¬B) ∧ (C ∨ D) $$
+
+2. **Formuła jest już w koniunkcyjnej postaci normalnej (KPN)**:
+   - Koniunkcyjna postać normalna to iloczyn sum, więc formuła jest już w odpowiedniej postaci.
+
+3. **Wynik**:
+   Formuła w KPN to:
+   $$ (¬A ∧ ¬B) ∧ (C ∨ D) $$
+
+
+### **Zadanie 5: Sprawdzenie prawa logiki**
+
+#### Treść zadania:
+Udowodnij, że prawo De Morgana:  
+$$ ¬(A ∧ B) ≡ (¬A ∨ ¬B) $$  
+jest prawdziwe, tworząc tabelę prawdy.
+
+#### Jak rozwiązać:
+
+1. **Wypisz wszystkie możliwe kombinacje dla zdań \( A \) i \( B \)**:
+
+| A    | B    |
+|------|------|
+| P    | P    |
+| P    | F    |
+| F    | P    |
+| F    | F    |
+
+2. **Oblicz wartości logiczne dla \( A ∧ B \) oraz \( ¬(A ∧ B) \)**:
+
+| A    | B    | A ∧ B | ¬(A ∧ B) |
+|------|------|-------|----------|
+| P    | P    | P     | F        |
+| P    | F    | F     | P        |
+| F    | P    | F     | P        |
+| F    | F    | F     | P        |
+
+3. **Oblicz wartości logiczne dla \( ¬A \) i \( ¬B \) oraz \( ¬A ∨ ¬B \)**:
+
+| A    | B    | ¬A   | ¬B   | ¬A ∨ ¬B |
+|------|------|------|------|---------|
+| P    | P    | F    | F    | F       |
+| P    | F    | F    | P    | P       |
+| F    | P    | P    | F    | P       |
+| F    | F    | P    | P    | P       |
+
+4. **Porównaj wartości logiczne**:
+   Zauważ, że kolumny \( ¬(A ∧ B) \) i \( ¬A ∨ ¬B \) są identyczne, co oznacza, że prawo De Morgana jest prawdziwe.
+
+#### Wynik:
+Prawo De Morgana: \( ¬(A ∧ B) ≡ (¬A ∨ ¬B) \) zostało udowodnione.
+
+

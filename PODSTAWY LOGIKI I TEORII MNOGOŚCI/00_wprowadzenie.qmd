@@ -1,0 +1,404 @@
+# Wprowadzenie do logiki i teorii mnogości {.unnumbered}
+
+<br>
+
+
+Logika matematyczna i teoria mnogości stanowią fundamenty współczesnej matematyki. Logika pozwala na formułowanie precyzyjnych reguł rozumowania, a teoria mnogości bada pojęcia związane ze zbiorami, które są podstawowym elementem struktury matematycznej. Poniżej znajdziesz przystępne wprowadzenie do tych dwóch dziedzin.
+
+
+
+### 1. Czym jest logika?
+
+**Logika** to nauka o zasadach poprawnego wnioskowania. W matematyce logika pozwala badać związki między zdaniami i formułować precyzyjne wnioski na podstawie danych założeń.
+
+#### Przykłady:
+- **Zdanie prawdziwe**: „2 + 2 = 4”
+- **Zdanie fałszywe**: „Koty potrafią latać”
+
+Każde zdanie, które ma jednoznaczną wartość logiczną – jest prawdziwe (P) lub fałszywe (F) – nazywamy **zdaniem logicznym**. 
+
+#### Kluczowe pojęcia w logice:
+- **Spójniki logiczne**: Narzędzia do tworzenia złożonych zdań z prostych.
+- **Formuły logiczne**: Wyrażenia utworzone ze zdań prostych i spójników.
+- **Wartość logiczna**: Każda formuła logiczna może być prawdziwa lub fałszywa w zależności od wartości logicznych jej składników.
+
+
+
+### 2. Czym jest teoria mnogości?
+
+**Teoria mnogości** (teoria zbiorów) zajmuje się badaniem zbiorów – kolekcji obiektów. Pojęcie zbioru jest intuicyjne – można je zrozumieć jako kolekcję elementów, takich jak liczby, litery, czy nawet inne zbiory.
+
+#### Przykład zbioru:
+- Zbiór liczb: \( A = \{1, 2, 3, 4\} \)
+  
+Zbiór \( A \) zawiera elementy 1, 2, 3 i 4. Każdy element zbioru jest jednoznacznie określony i możemy mówić o operacjach na zbiorach, takich jak suma, przecięcie czy różnica.
+
+
+
+### 3. **Podstawowe pojęcia logiki**
+
+#### Spójniki logiczne:
+Spójniki są operacjami, które łączą zdania logiczne. Oto najważniejsze z nich:
+
+- **Negacja (¬)**: Zaprzeczenie zdania. Przykład: Jeśli zdanie „Pada deszcz” jest prawdziwe, to jego negacja „Nie pada deszcz” jest fałszywa.
+- **Koniunkcja (∧)**: Połączenie zdań za pomocą „i”. Zdanie złożone jest prawdziwe, jeśli oba zdania są prawdziwe.
+- **Alternatywa (∨)**: Połączenie zdań za pomocą „lub”. Zdanie złożone jest prawdziwe, jeśli co najmniej jedno z nich jest prawdziwe.
+- **Implikacja (→)**: Wyrażenie „jeśli... to...”. Zdanie jest fałszywe tylko wtedy, gdy pierwsze zdanie jest prawdziwe, a drugie fałszywe.
+- **Równoważność (↔)**: Dwa zdania są równoważne, jeśli mają tę samą wartość logiczną.
+
+#### Tabele prawdy:
+Tabele prawdy pozwalają określić wartości logiczne złożonych formuł w zależności od wartości logicznych zdań prostych. Przykład tabeli prawdy dla koniunkcji:
+
+| A    | B    | A ∧ B |
+|------|------|-------|
+| P    | P    | P     |
+| P    | F    | F     |
+| F    | P    | F     |
+| F    | F    | F     |
+
+
+
+### 4. Podstawowe pojęcia teorii mnogości
+
+#### Zbiór
+Zbiór to podstawowe pojęcie teorii mnogości. Zbiór możemy definiować jako dowolny zestaw obiektów, np. liczby, osoby czy książki. Każdy element zbioru należy do zbioru albo nie należy – nie ma stanów pośrednich.
+
+#### Działania na zbiorach:
+- **Suma zbiorów (A ∪ B)**: Zbiór wszystkich elementów, które należą do \( A \) lub do \( B \).
+- **Przecięcie zbiorów (A ∩ B)**: Zbiór elementów, które należą jednocześnie do \( A \) i \( B \).
+- **Różnica zbiorów (A \ B)**: Zbiór elementów, które należą do \( A \), ale nie należą do \( B \).
+- **Dopełnienie zbioru (A^c)**: Zbiór elementów, które nie należą do \( A \).
+
+#### Podzbiory:
+Zbiór \( A \) jest podzbiorem zbioru \( B \) (zapisujemy to jako \( A \subseteq B \)), jeśli każdy element \( A \) należy również do zbioru \( B \).
+
+#### Zbiór potęgowy:
+Zbiór potęgowy to zbiór wszystkich podzbiorów danego zbioru. Dla zbioru \( A = \{1, 2\} \), zbiór potęgowy to:
+$$ \mathcal{P}(A) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\} $$
+
+
+
+### 5. Rachunek predykatów i kwantyfikatory
+
+W rachunku predykatów badamy własności i związki obiektów. Ważnym pojęciem są **kwantyfikatory**:
+
+- **Kwantyfikator ogólny (∀)**: Oznacza „dla każdego” lub „dla wszystkich”. Na przykład:
+  $$ ∀x \in \mathbb{R}, x^2 \geq 0 $$
+  Znaczy to: dla każdej liczby rzeczywistej \( x \), kwadrat tej liczby jest większy lub równy zero.
+  
+- **Kwantyfikator szczegółowy (∃)**: Oznacza „istnieje” lub „dla pewnego”. Na przykład:
+  $$ ∃x \in \mathbb{R}, x^2 = 1 $$
+  Znaczy to: istnieje liczba rzeczywista \( x \), dla której \( x^2 = 1 \).
+
+
+
+### 6. Przykładowe zadanie – operacje na zbiorach
+
+**Zadanie:**
+Dane są dwa zbiory: \( A = \{1, 2, 3, 4\} \) oraz \( B = \{3, 4, 5, 6\} \). Znajdź:
+1. Suma zbiorów \( A \cup B \)
+2. Przecięcie zbiorów \( A \cap B \)
+3. Różnica zbiorów \( A \setminus B \)
+
+**Rozwiązanie:**
+1. Suma: \( A \cup B = \{1, 2, 3, 4, 5, 6\} \)
+2. Przecięcie: \( A \cap B = \{3, 4\} \)
+3. Różnica: \( A \setminus B = \{1, 2\} \)
+
+Oto szczegółowy opis krok po kroku, jak rozwiązać poszczególne ćwiczenia z części "Wprowadzenie do logiki i teorii mnogości":
+
+---
+
+### **Rozwiązywanie zadań do logiki**
+
+#### 1. **Tabele prawdy**
+
+**Zadanie a)**: \( A ∧ B \)
+
+1. **Rozpocznij od spisania możliwych kombinacji wartości logicznych dla \( A \) i \( B \)**:
+   - Ponieważ mamy dwie zmienne, każda z nich może przyjąć wartość Prawda (P) lub Fałsz (F), co daje nam łącznie cztery kombinacje.
+   
+2. **Wypisz wszystkie możliwe kombinacje**:
+   - \( A = P \), \( B = P \)
+   - \( A = P \), \( B = F \)
+   - \( A = F \), \( B = P \)
+   - \( A = F \), \( B = F \)
+   
+3. **Zastosuj spójnik logiczny koniunkcji (∧)**:
+   - \( A ∧ B \) jest prawdziwe tylko wtedy, gdy oba zdania są prawdziwe.
+
+| A    | B    | A ∧ B |
+|------|------|-------|
+| P    | P    | P     |
+| P    | F    | F     |
+| F    | P    | F     |
+| F    | F    | F     |
+
+**Zadanie b)**: \( A ∨ ¬B \)
+
+1. **Utwórz tabelę z możliwymi kombinacjami dla \( A \) i \( B \)**, tak jak w poprzednim zadaniu.
+
+2. **Oblicz negację \( B \)**:
+   - Jeśli \( B \) jest prawdziwe, to \( ¬B \) jest fałszywe i odwrotnie.
+
+3. **Zastosuj spójnik alternatywy (∨)**:
+   - \( A ∨ ¬B \) jest prawdziwe, jeśli \( A \) lub \( ¬B \) jest prawdziwe.
+
+| A    | B    | ¬B   | A ∨ ¬B |
+|------|------|------|--------|
+| P    | P    | F    | P      |
+| P    | F    | P    | P      |
+| F    | P    | F    | F      |
+| F    | F    | P    | P      |
+
+---
+
+#### 2. **Operacje na spójnikach logicznych**
+
+**Zadanie a)**: \( A → (B ∨ C) \)
+
+1. **Zapisz formułę logiczną w formie słownej**:
+   - \( A → (B ∨ C) \): „Jeśli \( A \) jest prawdziwe, to \( B \) lub \( C \) jest prawdziwe”.
+   - To oznacza, że w przypadku prawdziwości zdania \( A \), co najmniej jedno z \( B \) lub \( C \) musi być prawdziwe.
+
+**Zadanie b)**: \( ¬(A ∧ B) \)
+
+1. **Przekształć formułę na słowa**:
+   - \( ¬(A ∧ B) \): „Nie jest prawdą, że \( A \) i \( B \) są jednocześnie prawdziwe”.
+   - To zdanie mówi, że przynajmniej jedno z \( A \) lub \( B \) musi być fałszywe.
+
+---
+
+#### 3. **Przykłady tautologii**
+
+**Zadanie a)**: \( A ∨ ¬A \)
+
+1. **Zdefiniuj tautologię**:
+   - Tautologia to formuła, która jest zawsze prawdziwa, niezależnie od wartości logicznych zmiennych.
+
+2. **Sprawdź wartości logiczne**:
+   - \( A ∨ ¬A \) mówi, że albo zdanie \( A \) jest prawdziwe, albo jego negacja \( ¬A \) jest prawdziwa. To zawsze będzie prawdą.
+
+| A    | ¬A   | A ∨ ¬A |
+|------|------|--------|
+| P    | F    | P      |
+| F    | P    | P      |
+
+---
+
+### **Rozwiązywanie zadań do teorii mnogości**
+
+#### 1. **Operacje na zbiorach**
+
+**Zadanie a)**: Suma zbiorów \( A ∪ B \)
+
+1. **Zdefiniuj sumę zbiorów**:
+   - Suma \( A ∪ B \) to zbiór wszystkich elementów, które należą do \( A \) lub do \( B \).
+
+2. **Rozpocznij od elementów zbioru \( A \)**:
+   - \( A = \{1, 2, 3, 4\} \).
+
+3. **Dodaj elementy zbioru \( B \), które nie należą do \( A \)**:
+   - \( B = \{3, 4, 5\} \), więc dodajemy element \( 5 \).
+
+4. **Wynik**:
+   - \( A ∪ B = \{1, 2, 3, 4, 5\} \).
+
+**Zadanie b)**: Przecięcie zbiorów \( A ∩ C \)
+
+1. **Zdefiniuj przecięcie zbiorów**:
+   - Przecięcie \( A ∩ C \) to zbiór elementów, które należą zarówno do \( A \), jak i do \( C \).
+
+2. **Sprawdź, które elementy znajdują się w obu zbiorach**:
+   - \( A = \{1, 2, 3, 4\} \), \( C = \{2, 5, 6\} \), więc element wspólny to \( 2 \).
+
+3. **Wynik**:
+   - \( A ∩ C = \{2\} \).
+
+---
+
+#### 2. **Podzbiory**
+
+**Zadanie a)**: \( \{2, 3\} \subseteq A \)
+
+1. **Zdefiniuj podzbiór**:
+   - Zbiór \( B \) jest podzbiorem zbioru \( A \), jeśli każdy element \( B \) należy do \( A \).
+
+2. **Sprawdź, czy każdy element zbioru \( \{2, 3\} \) należy do \( A \)**:
+   - \( A = \{1, 2, 3, 4\} \), więc \( \{2, 3\} \) faktycznie jest podzbiorem \( A \).
+
+3. **Wynik**:
+   - Tak, \( \{2, 3\} \subseteq A \).
+
+---
+
+#### 3. **Zbiór potęgowy**
+
+**Zadanie**: Zbiór \( X = \{a, b\} \). Znajdź zbiór potęgowy \( \mathcal{P}(X) \).
+
+1. **Zdefiniuj zbiór potęgowy**:
+   - Zbiór potęgowy to zbiór wszystkich podzbiorów danego zbioru, w tym pusty zbiór i sam zbiór.
+
+2. **Znajdź podzbiory zbioru \( X \)**:
+   - Zbiór pusty \( \emptyset \),
+   - Zbiory jednoelementowe \( \{a\} \), \( \{b\} \),
+   - Zbiór \( \{a, b\} \).
+
+3. **Wynik**:
+   - \( \mathcal{P}(X) = \{\emptyset, \{a\}, \{b\}, \{a, b\}\} \).
+
+---
+
+#### 4. **Relacje i iloczyn kartezjański**
+
+**Zadanie a)**: Iloczyn kartezjański \( A \times B \)
+
+1. **Zdefiniuj iloczyn kartezjański**:
+   - Iloczyn kartezjański \( A \times B \) to zbiór wszystkich możliwych par \( (a, b) \), gdzie \( a \) należy do \( A \), a \( b \) do \( B \).
+
+2. **Wypisz wszystkie pary**:
+   - \( A = \{1, 2\} \),
+   - \( B = \{a, b\} \).
+
+3. **Wynik**:
+   - \( A \times B = \{(1, a), (1, b), (2, a), (2, b)\} \).
+
+---
+
+#### 5. **Funkcje i obrazy zbiorów**
+
+**Zadanie a)**: Obraz zbioru \( A \) pod działaniem funkcji \( f \).
+
+1. **Zdefiniuj funkcję**:
+   - Funkcja przyporządkowuje każdemu elementowi zbioru \( A \) dokładnie jeden element ze zbioru \( B \).
+
+2. **Znajdź wartości funkcji
+
+ dla każdego elementu zbioru \( A \)**:
+   - \( f(1) = a \),
+   - \( f(2) = c \),
+   - \( f(3) = b \).
+
+3. **Wynik**:
+   - Obrazem zbioru \( A \) pod funkcją \( f \) jest \( \{a, c, b\} \).
+
+
+## Zadania
+
+
+#### 1. **Tabele prawdy**
+
+Uzupełnij tabele prawdy dla poniższych formuł logicznych:
+
+a) \( A ∧ B \)
+
+| A    | B    | A ∧ B |
+|------|------|-------|
+| P    | P    |       |
+| P    | F    |       |
+| F    | P    |       |
+| F    | F    |       |
+
+b) \( A ∨ ¬B \)
+
+| A    | B    | ¬B   | A ∨ ¬B |
+|------|------|------|--------|
+| P    | P    |      |        |
+| P    | F    |      |        |
+| F    | P    |      |        |
+| F    | F    |      |        |
+
+c) \( (A → B) ↔ (¬B → ¬A) \) (prawo kontrapozycji)
+
+| A    | B    | A → B | ¬B   | ¬B → ¬A | (A → B) ↔ (¬B → ¬A) |
+|------|------|-------|------|---------|---------------------|
+| P    | P    |       |      |         |                     |
+| P    | F    |       |      |         |                     |
+| F    | P    |       |      |         |                     |
+| F    | F    |       |      |         |                     |
+
+#### 2. **Operacje na spójnikach logicznych**
+
+Zapisz poniższe formuły logiczne w formie słownej (np. "jeśli... to..."):
+a) \( A → (B ∨ C) \)
+
+b) \( ¬(A ∧ B) \)
+
+c) \( (A ↔ B) ∧ C \)
+
+#### 3. **Przykłady tautologii**
+
+Udowodnij, że poniższe formuły są tautologiami, używając tabel prawdy:
+a) \( A ∨ ¬A \) (prawo wyłączonego środka)
+
+b) \( (A → B) ∨ (B → A) \)
+
+
+
+### Ćwiczenia do **teorii mnogości**:
+
+#### 1. **Operacje na zbiorach**
+
+Dane są zbiory \( A = \{1, 2, 3, 4\} \), \( B = \{3, 4, 5\} \) oraz \( C = \{2, 5, 6\} \). Oblicz:
+
+a) \( A ∪ B \)
+
+b) \( A ∩ C \)
+
+c) \( A \setminus B \)
+
+d) \( B \cup C \)
+
+#### 2. **Podzbiory**
+
+Sprawdź, które z poniższych relacji są prawdziwe:
+a) \( \{2, 3\} \subseteq A \)
+
+b) \( \{5, 6\} \subseteq C \)
+
+c) \( B \subseteq A \)
+
+#### 3. **Zbiór potęgowy**
+
+Zbiór \( X = \{a, b\} \). Znajdź zbiór potęgowy \( \mathcal{P}(X) \).
+
+#### 4. **Relacje i iloczyn kartezjański**
+
+Dane są zbiory \( A = \{1, 2\} \) oraz \( B = \{a, b\} \).
+
+a) Znajdź iloczyn kartezjański \( A \times B \).
+
+b) Znajdź iloczyn kartezjański \( B \times A \).
+
+c) Czy \( A \times B = B \times A \)?
+
+#### 5. **Funkcje i obrazy zbiorów**
+
+Dla funkcji \( f: A \to B \), gdzie \( A = \{1, 2, 3\} \) oraz \( B = \{a, b, c, d\} \), przypisano następujące wartości:
+
+- \( f(1) = a \)
+- \( f(2) = c \)
+- \( f(3) = b \)
+
+a) Znajdź obraz zbioru \( A \) pod działaniem funkcji \( f \).
+
+b) Czy \( f \) jest funkcją różnowartościową?
+
+
+
+
+###  **Zadania rachunku predykatów i kwantyfikatorów**:
+
+#### 1. **Kwantyfikatory**
+
+Przekształć poniższe zdania na wyrażenia logiczne z kwantyfikatorami:
+
+a) „Każda liczba naturalna jest większa lub równa zero.”
+
+b) „Istnieje liczba, która jest podzielna przez 2 i 3.”
+
+c) „Dla każdej liczby rzeczywistej istnieje liczba większa od niej.”
+
+#### 2. **Zadanie na zbiory liczbowe**
+
+Udowodnij, że dla każdej liczby naturalnej \( n \), suma liczb od 1 do \( n \) wynosi \( \frac{n(n+1)}{2} \), używając indukcji matematycznej.
