@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>PODSTAWY LOGIKI I TEORII MNOGOŚCI - Klasyczny Rachunek Zdań</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./summary.html" rel="next">
+<link href="./00_wprowadzenie.html" rel="prev">
+<link href="./logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Brak wyników",
+    "search-matching-documents-text": "dopasowane dokumenty",
+    "search-copy-link-title": "Kopiuj link do wyszukiwania",
+    "search-hide-matches-text": "Ukryj dodatkowe dopasowania",
+    "search-more-match-text": "więcej dopasowań w tym dokumencie",
+    "search-more-matches-text": "więcej dopasowań w tym dokumencie",
+    "search-clear-button-title": "Wyczyść",
+    "search-detached-cancel-button-title": "Anuluj",
+    "search-submit-button-title": "Zatwierdź"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta name="twitter:title" content="PODSTAWY LOGIKI I TEORII MNOGOŚCI - Klasyczny Rachunek Zdań">
+<meta name="twitter:description" content="Klasyczny rachunek zdań to dział logiki, który bada związki pomiędzy zdaniami logicznymi oraz analizuje ich wartości logiczne przy użyciu spójników.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Klasyczny Rachunek Zdań</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">PODSTAWY LOGIKI I TEORII MNOGOŚCI</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/jjallaire/hopr/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="" title="Download" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-download"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./PODSTAWY-LOGIKI-I-TEORII-MNOGOŚCI.pdf">
+            <i class="bi bi-bi-file-pdf pe-1"></i>
+          Download PDF
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./PODSTAWY-LOGIKI-I-TEORII-MNOGOŚCI.epub">
+            <i class="bi bi-bi-journal pe-1"></i>
+          Download ePub
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./PODSTAWY-LOGIKI-I-TEORII-MNOGOŚCI.docx">
+            <i class="bi bi-bi-file-word pe-1"></i>
+          Download Docx
+          </a>
+        </li>
+    </ul>
+    <a href="" title="Share" id="sidebar-tool-dropdown-1" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-1">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+            <i class="bi bi-bi-twitter pe-1"></i>
+          Twitter
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+            <i class="bi bi-bi-facebook pe-1"></i>
+          Facebook
+          </a>
+        </li>
+    </ul>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Wstęp</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00_wprowadzenie.html" class="sidebar-item-text sidebar-link">Wprowadzenie do logiki i teorii mnogości</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_klasyczny_rachunek_zdań.html" class="sidebar-item-text sidebar-link active">Klasyczny Rachunek Zdań</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Spis treści</h2>
+   
+  <ul>
+  <li><a href="#spójniki-logiczne-definicje-przykłady-tabele-prawdy" id="toc-spójniki-logiczne-definicje-przykłady-tabele-prawdy" class="nav-link active" data-scroll-target="#spójniki-logiczne-definicje-przykłady-tabele-prawdy"><strong>Spójniki logiczne: definicje, przykłady, tabele prawdy</strong></a></li>
+  <li><a href="#formuły-logiczne" id="toc-formuły-logiczne" class="nav-link" data-scroll-target="#formuły-logiczne"><strong>Formuły logiczne</strong></a></li>
+  <li><a href="#tautologie" id="toc-tautologie" class="nav-link" data-scroll-target="#tautologie"><strong>Tautologie</strong></a></li>
+  <li><a href="#ważniejsze-prawa-klasycznego-rachunku-zdań" id="toc-ważniejsze-prawa-klasycznego-rachunku-zdań" class="nav-link" data-scroll-target="#ważniejsze-prawa-klasycznego-rachunku-zdań"><strong>Ważniejsze prawa klasycznego rachunku zdań</strong></a></li>
+  <li><a href="#postać-apn-alternatywna-postać-normalna-i-kpn-koniunkcyjna-postać-normalna" id="toc-postać-apn-alternatywna-postać-normalna-i-kpn-koniunkcyjna-postać-normalna" class="nav-link" data-scroll-target="#postać-apn-alternatywna-postać-normalna-i-kpn-koniunkcyjna-postać-normalna"><strong>Postać APN (Alternatywna Postać Normalna) i KPN (Koniunkcyjna Postać Normalna)</strong></a></li>
+  <li><a href="#metoda-tablic-analitycznych" id="toc-metoda-tablic-analitycznych" class="nav-link" data-scroll-target="#metoda-tablic-analitycznych"><strong>Metoda tablic analitycznych</strong></a></li>
+  <li><a href="#zadania" id="toc-zadania" class="nav-link" data-scroll-target="#zadania">Zadania</a>
+  <ul class="collapse">
+  <li><a href="#zadanie-1-tabele-prawdy-dla-formuły-złożonej" id="toc-zadanie-1-tabele-prawdy-dla-formuły-złożonej" class="nav-link" data-scroll-target="#zadanie-1-tabele-prawdy-dla-formuły-złożonej"><strong>Zadanie 1: Tabele prawdy dla formuły złożonej</strong></a></li>
+  <li><a href="#zadanie-2-przekształcenie-formuły-do-alternatywnej-postaci-normalnej-apn" id="toc-zadanie-2-przekształcenie-formuły-do-alternatywnej-postaci-normalnej-apn" class="nav-link" data-scroll-target="#zadanie-2-przekształcenie-formuły-do-alternatywnej-postaci-normalnej-apn"><strong>Zadanie 2: Przekształcenie formuły do alternatywnej postaci normalnej (APN)</strong></a></li>
+  <li><a href="#zadanie-3-sprawdzenie-czy-formuła-jest-tautologią-używając-metody-tablic-analitycznych" id="toc-zadanie-3-sprawdzenie-czy-formuła-jest-tautologią-używając-metody-tablic-analitycznych" class="nav-link" data-scroll-target="#zadanie-3-sprawdzenie-czy-formuła-jest-tautologią-używając-metody-tablic-analitycznych"><strong>Zadanie 3: Sprawdzenie, czy formuła jest tautologią, używając metody tablic analitycznych</strong></a></li>
+  <li><a href="#zadanie-4-znalezienie-koniunkcyjnej-postaci-normalnej-kpn" id="toc-zadanie-4-znalezienie-koniunkcyjnej-postaci-normalnej-kpn" class="nav-link" data-scroll-target="#zadanie-4-znalezienie-koniunkcyjnej-postaci-normalnej-kpn"><strong>Zadanie 4: Znalezienie koniunkcyjnej postaci normalnej (KPN)</strong></a></li>
+  <li><a href="#zadanie-5-sprawdzenie-prawa-logiki" id="toc-zadanie-5-sprawdzenie-prawa-logiki" class="nav-link" data-scroll-target="#zadanie-5-sprawdzenie-prawa-logiki"><strong>Zadanie 5: Sprawdzenie prawa logiki</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Klasyczny Rachunek Zdań</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p><br></p>
+<p>Klasyczny rachunek zdań to dział logiki, który bada związki pomiędzy zdaniami logicznymi oraz analizuje ich wartości logiczne przy użyciu spójników. W tej części przyjrzymy się definicjom spójników logicznych, formułom logicznym, tautologiom, podstawowym prawom logiki oraz metodom upraszczania formuł logicznych.</p>
+<section id="spójniki-logiczne-definicje-przykłady-tabele-prawdy" class="level3">
+<h3 class="anchored" data-anchor-id="spójniki-logiczne-definicje-przykłady-tabele-prawdy"><strong>Spójniki logiczne: definicje, przykłady, tabele prawdy</strong></h3>
+<p>Spójniki logiczne to operatory łączące zdania logiczne, które pozwalają na budowanie złożonych wyrażeń. Poniżej opisane są najważniejsze spójniki wraz z ich definicjami, przykładami i tabelami prawdy.</p>
+<section id="negacja" class="level4">
+<h4 class="anchored" data-anchor-id="negacja">1. <strong>Negacja (¬)</strong></h4>
+<p>Negacja zmienia wartość logiczną zdania na przeciwną.</p>
+<ul>
+<li><p><strong>Definicja</strong>: Jeśli zdanie ( A ) jest prawdziwe, to negacja ( ¬A ) jest fałszywa, i odwrotnie.</p></li>
+<li><p><strong>Przykład</strong>: Jeśli ( A ) oznacza “Pada deszcz”, to ( ¬A ) oznacza “Nie pada deszcz”.</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>¬A</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>P</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="koniunkcja" class="level4">
+<h4 class="anchored" data-anchor-id="koniunkcja">2. <strong>Koniunkcja (∧)</strong></h4>
+<p>Koniunkcja oznacza “i” i łączy dwa zdania. Zdanie złożone jest prawdziwe tylko wtedy, gdy oba zdania są prawdziwe.</p>
+<ul>
+<li><p><strong>Definicja</strong>: ( A ∧ B ) jest prawdziwe, jeśli ( A ) i ( B ) są prawdziwe.</p></li>
+<li><p><strong>Przykład</strong>: “Pada deszcz” i “Wieje wiatr” – zdanie złożone jest prawdziwe tylko wtedy, gdy oba zdania są prawdziwe.</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>A ∧ B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="alternatywa" class="level4">
+<h4 class="anchored" data-anchor-id="alternatywa">3. <strong>Alternatywa (∨)</strong></h4>
+<p>Alternatywa oznacza “lub” i jest prawdziwa, gdy co najmniej jedno ze zdań jest prawdziwe.</p>
+<ul>
+<li><p><strong>Definicja</strong>: ( A ∨ B ) jest prawdziwe, jeśli ( A ) lub ( B ) jest prawdziwe.</p></li>
+<li><p><strong>Przykład</strong>: “Pada deszcz” lub “Wieje wiatr” – zdanie jest prawdziwe, jeśli pada deszcz, wieje wiatr, albo oba zdania są prawdziwe.</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>A ∨ B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="implikacja" class="level4">
+<h4 class="anchored" data-anchor-id="implikacja">4. <strong>Implikacja (→)</strong></h4>
+<p>Implicacja wyraża “jeśli… to…”. Jest fałszywa tylko wtedy, gdy ( A ) jest prawdziwe, a ( B ) fałszywe.</p>
+<ul>
+<li><p><strong>Definicja</strong>: ( A → B ) jest fałszywe tylko, gdy ( A ) jest prawdziwe, a ( B ) fałszywe.</p></li>
+<li><p><strong>Przykład</strong>: “Jeśli pada deszcz, to wieje wiatr” – jest fałszywe, gdy pada deszcz, ale nie wieje wiatr.</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>A → B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>P</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="równoważność" class="level4">
+<h4 class="anchored" data-anchor-id="równoważność">5. <strong>Równoważność (↔︎)</strong></h4>
+<p>Równoważność oznacza, że oba zdania mają tę samą wartość logiczną – są albo oba prawdziwe, albo oba fałszywe.</p>
+<ul>
+<li><p><strong>Definicja</strong>: ( A ↔︎ B ) jest prawdziwe, gdy ( A ) i ( B ) mają tę samą wartość logiczną.</p></li>
+<li><p><strong>Przykład</strong>: “Pada deszcz wtedy i tylko wtedy, gdy wieje wiatr” – zdanie prawdziwe, jeśli obie części są prawdziwe lub obie są fałszywe.</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>A ↔︎ B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>P</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="formuły-logiczne" class="level3">
+<h3 class="anchored" data-anchor-id="formuły-logiczne"><strong>Formuły logiczne</strong></h3>
+<p><strong>Formuła logiczna</strong> to wyrażenie utworzone z jednej lub więcej zmiennych logicznych (zdań) oraz spójników logicznych. Każda formuła może mieć przypisaną wartość logiczną – prawda (P) lub fałsz (F) – w zależności od wartości logicznych zdań prostych, które ją tworzą.</p>
+<section id="rodzaje-formuł" class="level4">
+<h4 class="anchored" data-anchor-id="rodzaje-formuł"><strong>Rodzaje formuł</strong>:</h4>
+<ol type="1">
+<li><p><strong>Proste formuły logiczne</strong>: Są to pojedyncze zdania logiczne, np. ( A ), ( B ).</p></li>
+<li><p><strong>Złożone formuły logiczne</strong>: Powstają przez połączenie zdań prostych za pomocą spójników logicznych, np. ( A ∧ B ), ( A → B ).</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="tautologie" class="level3">
+<h3 class="anchored" data-anchor-id="tautologie"><strong>Tautologie</strong></h3>
+<p><strong>Tautologia</strong> to formuła logiczna, która jest zawsze prawdziwa, niezależnie od wartości logicznych zmiennych, które ją tworzą.</p>
+<section id="przykłady-tautologii" class="level4">
+<h4 class="anchored" data-anchor-id="przykłady-tautologii">Przykłady tautologii:</h4>
+<ol type="1">
+<li><p><strong>Prawo wyłączonego środka</strong>: <span class="math display">\[ A ∨ ¬A \]</span> Znaczy to, że zdanie ( A ) jest albo prawdziwe, albo jego zaprzeczenie jest prawdziwe – co zawsze będzie prawdą.</p></li>
+<li><p><strong>Prawo podwójnej implikacji</strong>: <span class="math display">\[ (A → B) ∨ (B → A) \]</span> Oznacza to, że jedno z dwóch zdań logicznych będzie prowadziło do drugiego.</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="ważniejsze-prawa-klasycznego-rachunku-zdań" class="level3">
+<h3 class="anchored" data-anchor-id="ważniejsze-prawa-klasycznego-rachunku-zdań"><strong>Ważniejsze prawa klasycznego rachunku zdań</strong></h3>
+<section id="prawo-de-morgana" class="level4">
+<h4 class="anchored" data-anchor-id="prawo-de-morgana">1. <strong>Prawo De Morgana</strong></h4>
+<p>Prawa te dotyczą negacji złożeń zdań:</p>
+<ul>
+<li><p><strong>Pierwsze prawo De Morgana</strong>: <span class="math display">\[ ¬(A ∧ B) ≡ (¬A ∨ ¬B) \]</span></p></li>
+<li><p><strong>Drugie prawo De Morgana</strong>: <span class="math display">\[ ¬(A ∨ B) ≡ (¬A ∧ ¬B) \]</span></p></li>
+</ul>
+</section>
+<section id="prawo-podwójnej-negacji" class="level4">
+<h4 class="anchored" data-anchor-id="prawo-podwójnej-negacji">2. <strong>Prawo podwójnej negacji</strong></h4>
+<p>Negacja negacji zdania jest równoważna samemu zdaniu: <span class="math display">\[ ¬(¬A) ≡ A \]</span></p>
+</section>
+<section id="prawo-rozdzielności" class="level4">
+<h4 class="anchored" data-anchor-id="prawo-rozdzielności">3. <strong>Prawo rozdzielności</strong></h4>
+<p>Dotyczy rozdzielania operatorów logicznych na formuły: - Koniunkcja rozdziela się względem alternatywy: <span class="math display">\[ A ∧ (B ∨ C) ≡ (A ∧ B) ∨ (A ∧ C) \]</span></p>
+<ul>
+<li>Alternatywa rozdziela się względem koniunkcji: <span class="math display">\[ A ∨ (B ∧ C) ≡ (A ∨ B) ∧ (A ∨ C) \]</span></li>
+</ul>
+</section>
+<section id="prawo-kontrapozycji" class="level4">
+<h4 class="anchored" data-anchor-id="prawo-kontrapozycji">4. <strong>Prawo kontrapozycji</strong></h4>
+<p>Kontrapozycja oznacza, że implikacja i jej odwrotna implikacja z negacją są równoważne: <span class="math display">\[ (A → B) ≡ (¬B → ¬A) \]</span></p>
+<hr>
+</section>
+</section>
+<section id="postać-apn-alternatywna-postać-normalna-i-kpn-koniunkcyjna-postać-normalna" class="level3">
+<h3 class="anchored" data-anchor-id="postać-apn-alternatywna-postać-normalna-i-kpn-koniunkcyjna-postać-normalna"><strong>Postać APN (Alternatywna Postać Normalna) i KPN (Koniunkcyjna Postać Normalna)</strong></h3>
+<p><strong>Postać normalna</strong> to sposób przedstawienia formuł logicznych w uporządkowanej formie.</p>
+<section id="alternatywna-postać-normalna-apn" class="level4">
+<h4 class="anchored" data-anchor-id="alternatywna-postać-normalna-apn"><strong>Alternatywna Postać Normalna (APN)</strong></h4>
+<ul>
+<li>Formuła jest w postaci alternatywy koniunkcji (suma iloczynów).</li>
+<li>Przykład: ( (A ∧ B) ∨ (¬A ∧ C) )</li>
+</ul>
+</section>
+<section id="koniunkcyjna-postać-normalna-kpn" class="level4">
+<h4 class="anchored" data-anchor-id="koniunkcyjna-postać-normalna-kpn"><strong>Koniunkcyjna Postać Normalna (KPN)</strong></h4>
+<ul>
+<li>Formuła jest w postaci koniunkcji alternatyw (iloczyn sum).</li>
+<li>Przykład: ( (A ∨ B) ∧ (¬A ∨ C) )</li>
+</ul>
+<p><strong>Krok po kroku – jak przekształcić formułę do APN lub KPN</strong>:</p>
+<ol type="1">
+<li><strong>Usunięcie implikacji i równoważności</strong>.</li>
+<li><strong>Stosowanie praw De Morgana</strong>.</li>
+<li><strong>Rozdzielenie operatorów logicznych</strong>.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="metoda-tablic-analitycznych" class="level3">
+<h3 class="anchored" data-anchor-id="metoda-tablic-analitycznych"><strong>Metoda tablic analitycznych</strong></h3>
+<p><strong>Metoda tablic analitycznych</strong> to narzędzie do analizy formuł logicznych, które pozwala sprawdzić, czy dana formuła jest tautologią, sprzeczna lub spełnialna. D</p>
+<p>ziała poprzez systematyczne sprawdzanie możliwych wartości logicznych dla zdań w formule.</p>
+<section id="kroki-w-metodzie-tablic-analitycznych" class="level4">
+<h4 class="anchored" data-anchor-id="kroki-w-metodzie-tablic-analitycznych">Kroki w metodzie tablic analitycznych:</h4>
+<ol type="1">
+<li><strong>Rozbij formułę na alternatywy i koniunkcje</strong>.</li>
+<li><strong>Tworzenie drzewa</strong>: Każda formuła dzieli się na gałęzie drzewa reprezentujące możliwe wartości logiczne.</li>
+<li><strong>Ocena</strong>: Jeśli wszystkie gałęzie drzewa prowadzą do prawdziwości formuły, formuła jest tautologią.</li>
+</ol>
+</section>
+<section id="przykład" class="level4">
+<h4 class="anchored" data-anchor-id="przykład"><strong>Przykład</strong>:</h4>
+<p>Dla formuły ( A ∧ (A → B) ), stosujemy metodę tablic:</p>
+<ol type="1">
+<li>Tworzymy drzewo możliwości dla ( A ) i ( B ).</li>
+<li>Sprawdzamy, czy formuła jest spełniona we wszystkich przypadkach.</li>
+</ol>
+<p>Oto przykłady zadań z klasycznego rachunku zdań wraz z opisem krok po kroku, jak je rozwiązać.</p>
+</section>
+</section>
+<section id="zadania" class="level2">
+<h2 class="anchored" data-anchor-id="zadania">Zadania</h2>
+<section id="zadanie-1-tabele-prawdy-dla-formuły-złożonej" class="level3">
+<h3 class="anchored" data-anchor-id="zadanie-1-tabele-prawdy-dla-formuły-złożonej"><strong>Zadanie 1: Tabele prawdy dla formuły złożonej</strong></h3>
+<section id="treść-zadania" class="level4">
+<h4 class="anchored" data-anchor-id="treść-zadania">Treść zadania:</h4>
+<p>Zbuduj tabelę prawdy dla formuły logicznej:<br>
+<span class="math display">\[ (A ∨ B) ∧ ¬C \]</span></p>
+</section>
+<section id="jak-rozwiązać" class="level4">
+<h4 class="anchored" data-anchor-id="jak-rozwiązać">Jak rozwiązać:</h4>
+<ol type="1">
+<li><strong>Wypisz wszystkie możliwe wartości logiczne dla zdań ( A ), ( B ) i ( C )</strong>: Ponieważ każde zdanie może być prawdziwe (P) lub fałszywe (F), łączna liczba kombinacji wynosi ( 2^3 = 8 ).</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>P</td>
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li><strong>Oblicz wartość logiczną alternatywy ( A ∨ B )</strong>: Alternatywa jest prawdziwa, gdy co najmniej jedno zdanie jest prawdziwe.</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>A ∨ B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>P</td>
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>P</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>P</td>
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>F</td>
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li><strong>Oblicz wartość logiczną negacji ( ¬C )</strong>: Negacja zmienia wartość logiczną zdania ( C ) na przeciwną.</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>A ∨ B</th>
+<th>¬C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>P</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>P</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>P</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>F</td>
+<td>P</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>P</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" type="1">
+<li><strong>Oblicz wartość logiczną koniunkcji ( (A ∨ B) ∧ ¬C )</strong>: Koniunkcja jest prawdziwa tylko wtedy, gdy oba zdania są prawdziwe.</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>A ∨ B</th>
+<th>¬C</th>
+<th>(A ∨ B) ∧ ¬C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>P</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>P</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>P</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>F</td>
+<td>P</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>P</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="wynik" class="level4">
+<h4 class="anchored" data-anchor-id="wynik">Wynik:</h4>
+<p>Tabela prawdy dla formuły ( (A ∨ B) ∧ ¬C ) pokazuje, że formuła jest prawdziwa w wierszach 2, 4 i 6.</p>
+<hr>
+</section>
+</section>
+<section id="zadanie-2-przekształcenie-formuły-do-alternatywnej-postaci-normalnej-apn" class="level3">
+<h3 class="anchored" data-anchor-id="zadanie-2-przekształcenie-formuły-do-alternatywnej-postaci-normalnej-apn"><strong>Zadanie 2: Przekształcenie formuły do alternatywnej postaci normalnej (APN)</strong></h3>
+<section id="treść-zadania-1" class="level4">
+<h4 class="anchored" data-anchor-id="treść-zadania-1">Treść zadania:</h4>
+<p>Przekształć formułę:<br>
+<span class="math display">\[ ¬(A ∧ B) ∨ (C ∧ ¬D) \]</span><br>
+do alternatywnej postaci normalnej (APN).</p>
+</section>
+<section id="jak-rozwiązać-1" class="level4">
+<h4 class="anchored" data-anchor-id="jak-rozwiązać-1">Jak rozwiązać:</h4>
+<ol type="1">
+<li><p><strong>Rozpocznij od zastosowania praw De Morgana do negacji ( ¬(A ∧ B) )</strong>: Zastosowanie prawa De Morgana zmienia koniunkcję na alternatywę: <span class="math display">\[ ¬(A ∧ B) ≡ (¬A ∨ ¬B) \]</span></p>
+<p>Formuła przyjmuje postać: <span class="math display">\[ (¬A ∨ ¬B) ∨ (C ∧ ¬D) \]</span></p></li>
+<li><p><strong>Rozdziel alternatywę względem koniunkcji (prawo rozdzielności)</strong>: Rozdziel alternatywę ( (¬A ∨ ¬B) ) względem ( C ∧ ¬D ): <span class="math display">\[ (¬A ∨ ¬B) ∨ (C ∧ ¬D) ≡ (¬A ∨ ¬B ∨ C) ∧ (¬A ∨ ¬B ∨ ¬D) \]</span></p></li>
+<li><p><strong>Wynik</strong>: Formuła w alternatywnej postaci normalnej (APN) to: <span class="math display">\[ (¬A ∨ ¬B ∨ C) ∧ (¬A ∨ ¬B ∨ ¬D) \]</span></p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="zadanie-3-sprawdzenie-czy-formuła-jest-tautologią-używając-metody-tablic-analitycznych" class="level3">
+<h3 class="anchored" data-anchor-id="zadanie-3-sprawdzenie-czy-formuła-jest-tautologią-używając-metody-tablic-analitycznych"><strong>Zadanie 3: Sprawdzenie, czy formuła jest tautologią, używając metody tablic analitycznych</strong></h3>
+<section id="treść-zadania-2" class="level4">
+<h4 class="anchored" data-anchor-id="treść-zadania-2">Treść zadania:</h4>
+<p>Sprawdź, czy formuła:<br>
+<span class="math display">\[ (A → B) ∨ (B → A) \]</span><br>
+jest tautologią, używając metody tablic analitycznych.</p>
+</section>
+<section id="jak-rozwiązać-2" class="level4">
+<h4 class="anchored" data-anchor-id="jak-rozwiązać-2">Jak rozwiązać:</h4>
+<ol type="1">
+<li><p><strong>Rozpocznij od zapisu formuły w postaci bez implikacji</strong>: Zastąp implikację równoważną formą:</p>
+<ul>
+<li>( A → B ¬A ∨ B )</li>
+<li>( B → A ¬B ∨ A )</li>
+</ul>
+<p>Formuła przyjmuje postać: <span class="math display">\[ (¬A ∨ B) ∨ (¬B ∨ A) \]</span></p></li>
+<li><p><strong>Podziel formułę na alternatywy</strong>: Zauważ, że mamy dwie alternatywy, które można podzielić:</p>
+<ul>
+<li>( ¬A )</li>
+<li>( B )</li>
+<li>( ¬B )</li>
+<li>( A )</li>
+</ul></li>
+<li><p><strong>Tworzenie gałęzi w metodzie tablic analitycznych</strong>: Teraz rozważ możliwe wartości logiczne zmiennych ( A ) i ( B ). Twórz gałęzie drzewa dla każdego przypadku:</p>
+<ul>
+<li>( A = P ), ( B = P ): Formuła ( (¬A ∨ B) ∨ (¬B ∨ A) ) przyjmuje wartość P.</li>
+<li>( A = P ), ( B = F ): Formuła przyjmuje wartość P.</li>
+<li>( A = F ), ( B = P ): Formuła przyjmuje wartość P.</li>
+<li>( A = F ), ( B = F ): Formuła przyjmuje wartość P.</li>
+</ul></li>
+<li><p><strong>Wynik</strong>: Każda z gałęzi prowadzi do wartości prawdziwej, więc formuła ( (A → B) ∨ (B → A) ) jest <strong>tautologią</strong>.</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="zadanie-4-znalezienie-koniunkcyjnej-postaci-normalnej-kpn" class="level3">
+<h3 class="anchored" data-anchor-id="zadanie-4-znalezienie-koniunkcyjnej-postaci-normalnej-kpn"><strong>Zadanie 4: Znalezienie koniunkcyjnej postaci normalnej (KPN)</strong></h3>
+<section id="treść-zadania-3" class="level4">
+<h4 class="anchored" data-anchor-id="treść-zadania-3">Treść zadania:</h4>
+<p>Przekształć formułę:<br>
+<span class="math display">\[ ¬(A ∨ B) ∧ (C ∨ D) \]</span><br>
+do koniunkcyjnej postaci normalnej (KPN).</p>
+</section>
+<section id="jak-rozwiązać-3" class="level4">
+<h4 class="anchored" data-anchor-id="jak-rozwiązać-3">Jak rozwiązać:</h4>
+<ol type="1">
+<li><p><strong>Zastosuj prawo De Morgana do negacji ( ¬(A ∨ B) )</strong>: Zmieniamy alternatywę na koniunkcję: <span class="math display">\[ ¬(A ∨ B) ≡ (¬A ∧ ¬B) \]</span></p>
+<p>Formuła przyjmuje postać: <span class="math display">\[ (¬A ∧ ¬B) ∧ (C ∨ D) \]</span></p></li>
+<li><p><strong>Formuła jest już w koniunkcyjnej postaci normalnej (KPN)</strong>:</p>
+<ul>
+<li>Koniunkcyjna postać normalna to iloczyn sum, więc formuła jest już w odpowiedniej postaci.</li>
+</ul></li>
+<li><p><strong>Wynik</strong>: Formuła w KPN to: <span class="math display">\[ (¬A ∧ ¬B) ∧ (C ∨ D) \]</span></p></li>
+</ol>
+</section>
+</section>
+<section id="zadanie-5-sprawdzenie-prawa-logiki" class="level3">
+<h3 class="anchored" data-anchor-id="zadanie-5-sprawdzenie-prawa-logiki"><strong>Zadanie 5: Sprawdzenie prawa logiki</strong></h3>
+<section id="treść-zadania-4" class="level4">
+<h4 class="anchored" data-anchor-id="treść-zadania-4">Treść zadania:</h4>
+<p>Udowodnij, że prawo De Morgana:<br>
+<span class="math display">\[ ¬(A ∧ B) ≡ (¬A ∨ ¬B) \]</span><br>
+jest prawdziwe, tworząc tabelę prawdy.</p>
+</section>
+<section id="jak-rozwiązać-4" class="level4">
+<h4 class="anchored" data-anchor-id="jak-rozwiązać-4">Jak rozwiązać:</h4>
+<ol type="1">
+<li><strong>Wypisz wszystkie możliwe kombinacje dla zdań ( A ) i ( B )</strong>:</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li><strong>Oblicz wartości logiczne dla ( A ∧ B ) oraz ( ¬(A ∧ B) )</strong>:</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>A ∧ B</th>
+<th>¬(A ∧ B)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>P</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li><strong>Oblicz wartości logiczne dla ( ¬A ) i ( ¬B ) oraz ( ¬A ∨ ¬B )</strong>:</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>¬A</th>
+<th>¬B</th>
+<th>¬A ∨ ¬B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>P</td>
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+</tbody>
+</table>
+<ol start="4" type="1">
+<li><strong>Porównaj wartości logiczne</strong>: Zauważ, że kolumny ( ¬(A ∧ B) ) i ( ¬A ∨ ¬B ) są identyczne, co oznacza, że prawo De Morgana jest prawdziwe.</li>
+</ol>
+</section>
+<section id="wynik-1" class="level4">
+<h4 class="anchored" data-anchor-id="wynik-1">Wynik:</h4>
+<p>Prawo De Morgana: ( ¬(A ∧ B) ≡ (¬A ∨ ¬B) ) zostało udowodnione.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Skopiowano!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Skopiowano!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./00_wprowadzenie.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Wprowadzenie do logiki i teorii mnogości</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./summary.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

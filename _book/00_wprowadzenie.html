@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>PODSTAWY LOGIKI I TEORII MNOGOŚCI - Wprowadzenie do logiki i teorii mnogości</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./01_klasyczny_rachunek_zdań.html" rel="next">
+<link href="./index.html" rel="prev">
+<link href="./logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Brak wyników",
+    "search-matching-documents-text": "dopasowane dokumenty",
+    "search-copy-link-title": "Kopiuj link do wyszukiwania",
+    "search-hide-matches-text": "Ukryj dodatkowe dopasowania",
+    "search-more-match-text": "więcej dopasowań w tym dokumencie",
+    "search-more-matches-text": "więcej dopasowań w tym dokumencie",
+    "search-clear-button-title": "Wyczyść",
+    "search-detached-cancel-button-title": "Anuluj",
+    "search-submit-button-title": "Zatwierdź"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta name="twitter:title" content="PODSTAWY LOGIKI I TEORII MNOGOŚCI - Wprowadzenie do logiki i teorii mnogości">
+<meta name="twitter:description" content="Logika matematyczna i teoria mnogości stanowią fundamenty współczesnej matematyki.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Wprowadzenie do logiki i teorii mnogości</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">PODSTAWY LOGIKI I TEORII MNOGOŚCI</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/jjallaire/hopr/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="" title="Download" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-download"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./PODSTAWY-LOGIKI-I-TEORII-MNOGOŚCI.pdf">
+            <i class="bi bi-bi-file-pdf pe-1"></i>
+          Download PDF
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./PODSTAWY-LOGIKI-I-TEORII-MNOGOŚCI.epub">
+            <i class="bi bi-bi-journal pe-1"></i>
+          Download ePub
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="./PODSTAWY-LOGIKI-I-TEORII-MNOGOŚCI.docx">
+            <i class="bi bi-bi-file-word pe-1"></i>
+          Download Docx
+          </a>
+        </li>
+    </ul>
+    <a href="" title="Share" id="sidebar-tool-dropdown-1" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-1">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+            <i class="bi bi-bi-twitter pe-1"></i>
+          Twitter
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+            <i class="bi bi-bi-facebook pe-1"></i>
+          Facebook
+          </a>
+        </li>
+    </ul>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Wstęp</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00_wprowadzenie.html" class="sidebar-item-text sidebar-link active">Wprowadzenie do logiki i teorii mnogości</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_klasyczny_rachunek_zdań.html" class="sidebar-item-text sidebar-link">Klasyczny Rachunek Zdań</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Spis treści</h2>
+   
+  <ul>
+  <li><a href="#czym-jest-logika" id="toc-czym-jest-logika" class="nav-link active" data-scroll-target="#czym-jest-logika">1. Czym jest logika?</a></li>
+  <li><a href="#czym-jest-teoria-mnogości" id="toc-czym-jest-teoria-mnogości" class="nav-link" data-scroll-target="#czym-jest-teoria-mnogości">2. Czym jest teoria mnogości?</a></li>
+  <li><a href="#podstawowe-pojęcia-logiki" id="toc-podstawowe-pojęcia-logiki" class="nav-link" data-scroll-target="#podstawowe-pojęcia-logiki">3. <strong>Podstawowe pojęcia logiki</strong></a></li>
+  <li><a href="#podstawowe-pojęcia-teorii-mnogości" id="toc-podstawowe-pojęcia-teorii-mnogości" class="nav-link" data-scroll-target="#podstawowe-pojęcia-teorii-mnogości">4. Podstawowe pojęcia teorii mnogości</a></li>
+  <li><a href="#rachunek-predykatów-i-kwantyfikatory" id="toc-rachunek-predykatów-i-kwantyfikatory" class="nav-link" data-scroll-target="#rachunek-predykatów-i-kwantyfikatory">5. Rachunek predykatów i kwantyfikatory</a></li>
+  <li><a href="#przykładowe-zadanie-operacje-na-zbiorach" id="toc-przykładowe-zadanie-operacje-na-zbiorach" class="nav-link" data-scroll-target="#przykładowe-zadanie-operacje-na-zbiorach">6. Przykładowe zadanie – operacje na zbiorach</a></li>
+  <li><a href="#rozwiązywanie-zadań-do-logiki" id="toc-rozwiązywanie-zadań-do-logiki" class="nav-link" data-scroll-target="#rozwiązywanie-zadań-do-logiki"><strong>Rozwiązywanie zadań do logiki</strong></a></li>
+  <li><a href="#rozwiązywanie-zadań-do-teorii-mnogości" id="toc-rozwiązywanie-zadań-do-teorii-mnogości" class="nav-link" data-scroll-target="#rozwiązywanie-zadań-do-teorii-mnogości"><strong>Rozwiązywanie zadań do teorii mnogości</strong></a></li>
+  <li><a href="#zadania" id="toc-zadania" class="nav-link" data-scroll-target="#zadania">Zadania</a>
+  <ul class="collapse">
+  <li><a href="#ćwiczenia-do-teorii-mnogości" id="toc-ćwiczenia-do-teorii-mnogości" class="nav-link" data-scroll-target="#ćwiczenia-do-teorii-mnogości">Ćwiczenia do <strong>teorii mnogości</strong>:</a></li>
+  <li><a href="#zadania-rachunku-predykatów-i-kwantyfikatorów" id="toc-zadania-rachunku-predykatów-i-kwantyfikatorów" class="nav-link" data-scroll-target="#zadania-rachunku-predykatów-i-kwantyfikatorów"><strong>Zadania rachunku predykatów i kwantyfikatorów</strong>:</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Wprowadzenie do logiki i teorii mnogości</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p><br></p>
+<p>Logika matematyczna i teoria mnogości stanowią fundamenty współczesnej matematyki. Logika pozwala na formułowanie precyzyjnych reguł rozumowania, a teoria mnogości bada pojęcia związane ze zbiorami, które są podstawowym elementem struktury matematycznej. Poniżej znajdziesz przystępne wprowadzenie do tych dwóch dziedzin.</p>
+<section id="czym-jest-logika" class="level3">
+<h3 class="anchored" data-anchor-id="czym-jest-logika">1. Czym jest logika?</h3>
+<p><strong>Logika</strong> to nauka o zasadach poprawnego wnioskowania. W matematyce logika pozwala badać związki między zdaniami i formułować precyzyjne wnioski na podstawie danych założeń.</p>
+<section id="przykłady" class="level4">
+<h4 class="anchored" data-anchor-id="przykłady">Przykłady:</h4>
+<ul>
+<li><strong>Zdanie prawdziwe</strong>: „2 + 2 = 4”</li>
+<li><strong>Zdanie fałszywe</strong>: „Koty potrafią latać”</li>
+</ul>
+<p>Każde zdanie, które ma jednoznaczną wartość logiczną – jest prawdziwe (P) lub fałszywe (F) – nazywamy <strong>zdaniem logicznym</strong>.</p>
+</section>
+<section id="kluczowe-pojęcia-w-logice" class="level4">
+<h4 class="anchored" data-anchor-id="kluczowe-pojęcia-w-logice">Kluczowe pojęcia w logice:</h4>
+<ul>
+<li><strong>Spójniki logiczne</strong>: Narzędzia do tworzenia złożonych zdań z prostych.</li>
+<li><strong>Formuły logiczne</strong>: Wyrażenia utworzone ze zdań prostych i spójników.</li>
+<li><strong>Wartość logiczna</strong>: Każda formuła logiczna może być prawdziwa lub fałszywa w zależności od wartości logicznych jej składników.</li>
+</ul>
+</section>
+</section>
+<section id="czym-jest-teoria-mnogości" class="level3">
+<h3 class="anchored" data-anchor-id="czym-jest-teoria-mnogości">2. Czym jest teoria mnogości?</h3>
+<p><strong>Teoria mnogości</strong> (teoria zbiorów) zajmuje się badaniem zbiorów – kolekcji obiektów. Pojęcie zbioru jest intuicyjne – można je zrozumieć jako kolekcję elementów, takich jak liczby, litery, czy nawet inne zbiory.</p>
+<section id="przykład-zbioru" class="level4">
+<h4 class="anchored" data-anchor-id="przykład-zbioru">Przykład zbioru:</h4>
+<ul>
+<li>Zbiór liczb: ( A = {1, 2, 3, 4} )</li>
+</ul>
+<p>Zbiór ( A ) zawiera elementy 1, 2, 3 i 4. Każdy element zbioru jest jednoznacznie określony i możemy mówić o operacjach na zbiorach, takich jak suma, przecięcie czy różnica.</p>
+</section>
+</section>
+<section id="podstawowe-pojęcia-logiki" class="level3">
+<h3 class="anchored" data-anchor-id="podstawowe-pojęcia-logiki">3. <strong>Podstawowe pojęcia logiki</strong></h3>
+<section id="spójniki-logiczne" class="level4">
+<h4 class="anchored" data-anchor-id="spójniki-logiczne">Spójniki logiczne:</h4>
+<p>Spójniki są operacjami, które łączą zdania logiczne. Oto najważniejsze z nich:</p>
+<ul>
+<li><strong>Negacja (¬)</strong>: Zaprzeczenie zdania. Przykład: Jeśli zdanie „Pada deszcz” jest prawdziwe, to jego negacja „Nie pada deszcz” jest fałszywa.</li>
+<li><strong>Koniunkcja (∧)</strong>: Połączenie zdań za pomocą „i”. Zdanie złożone jest prawdziwe, jeśli oba zdania są prawdziwe.</li>
+<li><strong>Alternatywa (∨)</strong>: Połączenie zdań za pomocą „lub”. Zdanie złożone jest prawdziwe, jeśli co najmniej jedno z nich jest prawdziwe.</li>
+<li><strong>Implikacja (→)</strong>: Wyrażenie „jeśli… to…”. Zdanie jest fałszywe tylko wtedy, gdy pierwsze zdanie jest prawdziwe, a drugie fałszywe.</li>
+<li><strong>Równoważność (↔︎)</strong>: Dwa zdania są równoważne, jeśli mają tę samą wartość logiczną.</li>
+</ul>
+</section>
+<section id="tabele-prawdy" class="level4">
+<h4 class="anchored" data-anchor-id="tabele-prawdy">Tabele prawdy:</h4>
+<p>Tabele prawdy pozwalają określić wartości logiczne złożonych formuł w zależności od wartości logicznych zdań prostych. Przykład tabeli prawdy dla koniunkcji:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>A ∧ B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="podstawowe-pojęcia-teorii-mnogości" class="level3">
+<h3 class="anchored" data-anchor-id="podstawowe-pojęcia-teorii-mnogości">4. Podstawowe pojęcia teorii mnogości</h3>
+<section id="zbiór" class="level4">
+<h4 class="anchored" data-anchor-id="zbiór">Zbiór</h4>
+<p>Zbiór to podstawowe pojęcie teorii mnogości. Zbiór możemy definiować jako dowolny zestaw obiektów, np. liczby, osoby czy książki. Każdy element zbioru należy do zbioru albo nie należy – nie ma stanów pośrednich.</p>
+</section>
+<section id="działania-na-zbiorach" class="level4">
+<h4 class="anchored" data-anchor-id="działania-na-zbiorach">Działania na zbiorach:</h4>
+<ul>
+<li><strong>Suma zbiorów (A ∪ B)</strong>: Zbiór wszystkich elementów, które należą do ( A ) lub do ( B ).</li>
+<li><strong>Przecięcie zbiorów (A ∩ B)</strong>: Zbiór elementów, które należą jednocześnie do ( A ) i ( B ).</li>
+<li><strong>Różnica zbiorów (A &nbsp;B)</strong>: Zbiór elementów, które należą do ( A ), ale nie należą do ( B ).</li>
+<li><strong>Dopełnienie zbioru (A^c)</strong>: Zbiór elementów, które nie należą do ( A ).</li>
+</ul>
+</section>
+<section id="podzbiory" class="level4">
+<h4 class="anchored" data-anchor-id="podzbiory">Podzbiory:</h4>
+<p>Zbiór ( A ) jest podzbiorem zbioru ( B ) (zapisujemy to jako ( A B )), jeśli każdy element ( A ) należy również do zbioru ( B ).</p>
+</section>
+<section id="zbiór-potęgowy" class="level4">
+<h4 class="anchored" data-anchor-id="zbiór-potęgowy">Zbiór potęgowy:</h4>
+<p>Zbiór potęgowy to zbiór wszystkich podzbiorów danego zbioru. Dla zbioru ( A = {1, 2} ), zbiór potęgowy to: <span class="math display">\[ \mathcal{P}(A) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\} \]</span></p>
+</section>
+</section>
+<section id="rachunek-predykatów-i-kwantyfikatory" class="level3">
+<h3 class="anchored" data-anchor-id="rachunek-predykatów-i-kwantyfikatory">5. Rachunek predykatów i kwantyfikatory</h3>
+<p>W rachunku predykatów badamy własności i związki obiektów. Ważnym pojęciem są <strong>kwantyfikatory</strong>:</p>
+<ul>
+<li><p><strong>Kwantyfikator ogólny (∀)</strong>: Oznacza „dla każdego” lub „dla wszystkich”. Na przykład: <span class="math display">\[ ∀x \in \mathbb{R}, x^2 \geq 0 \]</span> Znaczy to: dla każdej liczby rzeczywistej ( x ), kwadrat tej liczby jest większy lub równy zero.</p></li>
+<li><p><strong>Kwantyfikator szczegółowy (∃)</strong>: Oznacza „istnieje” lub „dla pewnego”. Na przykład: <span class="math display">\[ ∃x \in \mathbb{R}, x^2 = 1 \]</span> Znaczy to: istnieje liczba rzeczywista ( x ), dla której ( x^2 = 1 ).</p></li>
+</ul>
+</section>
+<section id="przykładowe-zadanie-operacje-na-zbiorach" class="level3">
+<h3 class="anchored" data-anchor-id="przykładowe-zadanie-operacje-na-zbiorach">6. Przykładowe zadanie – operacje na zbiorach</h3>
+<p><strong>Zadanie:</strong> Dane są dwa zbiory: ( A = {1, 2, 3, 4} ) oraz ( B = {3, 4, 5, 6} ). Znajdź: 1. Suma zbiorów ( A B ) 2. Przecięcie zbiorów ( A B ) 3. Różnica zbiorów ( A B )</p>
+<p><strong>Rozwiązanie:</strong> 1. Suma: ( A B = {1, 2, 3, 4, 5, 6} ) 2. Przecięcie: ( A B = {3, 4} ) 3. Różnica: ( A B = {1, 2} )</p>
+<p>Oto szczegółowy opis krok po kroku, jak rozwiązać poszczególne ćwiczenia z części “Wprowadzenie do logiki i teorii mnogości”:</p>
+<hr>
+</section>
+<section id="rozwiązywanie-zadań-do-logiki" class="level3">
+<h3 class="anchored" data-anchor-id="rozwiązywanie-zadań-do-logiki"><strong>Rozwiązywanie zadań do logiki</strong></h3>
+<section id="tabele-prawdy-1" class="level4">
+<h4 class="anchored" data-anchor-id="tabele-prawdy-1">1. <strong>Tabele prawdy</strong></h4>
+<p><strong>Zadanie a)</strong>: ( A ∧ B )</p>
+<ol type="1">
+<li><strong>Rozpocznij od spisania możliwych kombinacji wartości logicznych dla ( A ) i ( B )</strong>:
+<ul>
+<li>Ponieważ mamy dwie zmienne, każda z nich może przyjąć wartość Prawda (P) lub Fałsz (F), co daje nam łącznie cztery kombinacje.</li>
+</ul></li>
+<li><strong>Wypisz wszystkie możliwe kombinacje</strong>:
+<ul>
+<li>( A = P ), ( B = P )</li>
+<li>( A = P ), ( B = F )</li>
+<li>( A = F ), ( B = P )</li>
+<li>( A = F ), ( B = F )</li>
+</ul></li>
+<li><strong>Zastosuj spójnik logiczny koniunkcji (∧)</strong>:
+<ul>
+<li>( A ∧ B ) jest prawdziwe tylko wtedy, gdy oba zdania są prawdziwe.</li>
+</ul></li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>A ∧ B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Zadanie b)</strong>: ( A ∨ ¬B )</p>
+<ol type="1">
+<li><p><strong>Utwórz tabelę z możliwymi kombinacjami dla ( A ) i ( B )</strong>, tak jak w poprzednim zadaniu.</p></li>
+<li><p><strong>Oblicz negację ( B )</strong>:</p>
+<ul>
+<li>Jeśli ( B ) jest prawdziwe, to ( ¬B ) jest fałszywe i odwrotnie.</li>
+</ul></li>
+<li><p><strong>Zastosuj spójnik alternatywy (∨)</strong>:</p>
+<ul>
+<li>( A ∨ ¬B ) jest prawdziwe, jeśli ( A ) lub ( ¬B ) jest prawdziwe.</li>
+</ul></li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>¬B</th>
+<th>A ∨ ¬B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>P</td>
+<td>P</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="operacje-na-spójnikach-logicznych" class="level4">
+<h4 class="anchored" data-anchor-id="operacje-na-spójnikach-logicznych">2. <strong>Operacje na spójnikach logicznych</strong></h4>
+<p><strong>Zadanie a)</strong>: ( A → (B ∨ C) )</p>
+<ol type="1">
+<li><strong>Zapisz formułę logiczną w formie słownej</strong>:
+<ul>
+<li>( A → (B ∨ C) ): „Jeśli ( A ) jest prawdziwe, to ( B ) lub ( C ) jest prawdziwe”.</li>
+<li>To oznacza, że w przypadku prawdziwości zdania ( A ), co najmniej jedno z ( B ) lub ( C ) musi być prawdziwe.</li>
+</ul></li>
+</ol>
+<p><strong>Zadanie b)</strong>: ( ¬(A ∧ B) )</p>
+<ol type="1">
+<li><strong>Przekształć formułę na słowa</strong>:
+<ul>
+<li>( ¬(A ∧ B) ): „Nie jest prawdą, że ( A ) i ( B ) są jednocześnie prawdziwe”.</li>
+<li>To zdanie mówi, że przynajmniej jedno z ( A ) lub ( B ) musi być fałszywe.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="przykłady-tautologii" class="level4">
+<h4 class="anchored" data-anchor-id="przykłady-tautologii">3. <strong>Przykłady tautologii</strong></h4>
+<p><strong>Zadanie a)</strong>: ( A ∨ ¬A )</p>
+<ol type="1">
+<li><strong>Zdefiniuj tautologię</strong>:
+<ul>
+<li>Tautologia to formuła, która jest zawsze prawdziwa, niezależnie od wartości logicznych zmiennych.</li>
+</ul></li>
+<li><strong>Sprawdź wartości logiczne</strong>:
+<ul>
+<li>( A ∨ ¬A ) mówi, że albo zdanie ( A ) jest prawdziwe, albo jego negacja ( ¬A ) jest prawdziwa. To zawsze będzie prawdą.</li>
+</ul></li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>¬A</th>
+<th>A ∨ ¬A</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>F</td>
+<td>P</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>P</td>
+<td>P</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="rozwiązywanie-zadań-do-teorii-mnogości" class="level3">
+<h3 class="anchored" data-anchor-id="rozwiązywanie-zadań-do-teorii-mnogości"><strong>Rozwiązywanie zadań do teorii mnogości</strong></h3>
+<section id="operacje-na-zbiorach" class="level4">
+<h4 class="anchored" data-anchor-id="operacje-na-zbiorach">1. <strong>Operacje na zbiorach</strong></h4>
+<p><strong>Zadanie a)</strong>: Suma zbiorów ( A ∪ B )</p>
+<ol type="1">
+<li><strong>Zdefiniuj sumę zbiorów</strong>:
+<ul>
+<li>Suma ( A ∪ B ) to zbiór wszystkich elementów, które należą do ( A ) lub do ( B ).</li>
+</ul></li>
+<li><strong>Rozpocznij od elementów zbioru ( A )</strong>:
+<ul>
+<li>( A = {1, 2, 3, 4} ).</li>
+</ul></li>
+<li><strong>Dodaj elementy zbioru ( B ), które nie należą do ( A )</strong>:
+<ul>
+<li>( B = {3, 4, 5} ), więc dodajemy element ( 5 ).</li>
+</ul></li>
+<li><strong>Wynik</strong>:
+<ul>
+<li>( A ∪ B = {1, 2, 3, 4, 5} ).</li>
+</ul></li>
+</ol>
+<p><strong>Zadanie b)</strong>: Przecięcie zbiorów ( A ∩ C )</p>
+<ol type="1">
+<li><strong>Zdefiniuj przecięcie zbiorów</strong>:
+<ul>
+<li>Przecięcie ( A ∩ C ) to zbiór elementów, które należą zarówno do ( A ), jak i do ( C ).</li>
+</ul></li>
+<li><strong>Sprawdź, które elementy znajdują się w obu zbiorach</strong>:
+<ul>
+<li>( A = {1, 2, 3, 4} ), ( C = {2, 5, 6} ), więc element wspólny to ( 2 ).</li>
+</ul></li>
+<li><strong>Wynik</strong>:
+<ul>
+<li>( A ∩ C = {2} ).</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="podzbiory-1" class="level4">
+<h4 class="anchored" data-anchor-id="podzbiory-1">2. <strong>Podzbiory</strong></h4>
+<p><strong>Zadanie a)</strong>: ( {2, 3} A )</p>
+<ol type="1">
+<li><strong>Zdefiniuj podzbiór</strong>:
+<ul>
+<li>Zbiór ( B ) jest podzbiorem zbioru ( A ), jeśli każdy element ( B ) należy do ( A ).</li>
+</ul></li>
+<li><strong>Sprawdź, czy każdy element zbioru ( {2, 3} ) należy do ( A )</strong>:
+<ul>
+<li>( A = {1, 2, 3, 4} ), więc ( {2, 3} ) faktycznie jest podzbiorem ( A ).</li>
+</ul></li>
+<li><strong>Wynik</strong>:
+<ul>
+<li>Tak, ( {2, 3} A ).</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="zbiór-potęgowy-1" class="level4">
+<h4 class="anchored" data-anchor-id="zbiór-potęgowy-1">3. <strong>Zbiór potęgowy</strong></h4>
+<p><strong>Zadanie</strong>: Zbiór ( X = {a, b} ). Znajdź zbiór potęgowy ( (X) ).</p>
+<ol type="1">
+<li><strong>Zdefiniuj zbiór potęgowy</strong>:
+<ul>
+<li>Zbiór potęgowy to zbiór wszystkich podzbiorów danego zbioru, w tym pusty zbiór i sam zbiór.</li>
+</ul></li>
+<li><strong>Znajdź podzbiory zbioru ( X )</strong>:
+<ul>
+<li>Zbiór pusty ( ),</li>
+<li>Zbiory jednoelementowe ( {a} ), ( {b} ),</li>
+<li>Zbiór ( {a, b} ).</li>
+</ul></li>
+<li><strong>Wynik</strong>:
+<ul>
+<li>( (X) = {, {a}, {b}, {a, b}} ).</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="relacje-i-iloczyn-kartezjański" class="level4">
+<h4 class="anchored" data-anchor-id="relacje-i-iloczyn-kartezjański">4. <strong>Relacje i iloczyn kartezjański</strong></h4>
+<p><strong>Zadanie a)</strong>: Iloczyn kartezjański ( A B )</p>
+<ol type="1">
+<li><strong>Zdefiniuj iloczyn kartezjański</strong>:
+<ul>
+<li>Iloczyn kartezjański ( A B ) to zbiór wszystkich możliwych par ( (a, b) ), gdzie ( a ) należy do ( A ), a ( b ) do ( B ).</li>
+</ul></li>
+<li><strong>Wypisz wszystkie pary</strong>:
+<ul>
+<li>( A = {1, 2} ),</li>
+<li>( B = {a, b} ).</li>
+</ul></li>
+<li><strong>Wynik</strong>:
+<ul>
+<li>( A B = {(1, a), (1, b), (2, a), (2, b)} ).</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="funkcje-i-obrazy-zbiorów" class="level4">
+<h4 class="anchored" data-anchor-id="funkcje-i-obrazy-zbiorów">5. <strong>Funkcje i obrazy zbiorów</strong></h4>
+<p><strong>Zadanie a)</strong>: Obraz zbioru ( A ) pod działaniem funkcji ( f ).</p>
+<ol type="1">
+<li><strong>Zdefiniuj funkcję</strong>:
+<ul>
+<li>Funkcja przyporządkowuje każdemu elementowi zbioru ( A ) dokładnie jeden element ze zbioru ( B ).</li>
+</ul></li>
+<li>**Znajdź wartości funkcji</li>
+</ol>
+<p>dla każdego elementu zbioru ( A )**: - ( f(1) = a ), - ( f(2) = c ), - ( f(3) = b ).</p>
+<ol start="3" type="1">
+<li><strong>Wynik</strong>:
+<ul>
+<li>Obrazem zbioru ( A ) pod funkcją ( f ) jest ( {a, c, b} ).</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="zadania" class="level2">
+<h2 class="anchored" data-anchor-id="zadania">Zadania</h2>
+<section id="tabele-prawdy-2" class="level4">
+<h4 class="anchored" data-anchor-id="tabele-prawdy-2">1. <strong>Tabele prawdy</strong></h4>
+<p>Uzupełnij tabele prawdy dla poniższych formuł logicznych:</p>
+<ol type="a">
+<li>( A ∧ B )</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>A ∧ B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="a">
+<li>( A ∨ ¬B )</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>¬B</th>
+<th>A ∨ ¬B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="a">
+<li>( (A → B) ↔︎ (¬B → ¬A) ) (prawo kontrapozycji)</li>
+</ol>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>A → B</th>
+<th>¬B</th>
+<th>¬B → ¬A</th>
+<th>(A → B) ↔︎ (¬B → ¬A)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P</td>
+<td>P</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>P</td>
+<td>F</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>P</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="operacje-na-spójnikach-logicznych-1" class="level4">
+<h4 class="anchored" data-anchor-id="operacje-na-spójnikach-logicznych-1">2. <strong>Operacje na spójnikach logicznych</strong></h4>
+<p>Zapisz poniższe formuły logiczne w formie słownej (np. “jeśli… to…”): a) ( A → (B ∨ C) )</p>
+<ol start="2" type="a">
+<li><p>( ¬(A ∧ B) )</p></li>
+<li><p>( (A ↔︎ B) ∧ C )</p></li>
+</ol>
+</section>
+<section id="przykłady-tautologii-1" class="level4">
+<h4 class="anchored" data-anchor-id="przykłady-tautologii-1">3. <strong>Przykłady tautologii</strong></h4>
+<p>Udowodnij, że poniższe formuły są tautologiami, używając tabel prawdy: a) ( A ∨ ¬A ) (prawo wyłączonego środka)</p>
+<ol start="2" type="a">
+<li>( (A → B) ∨ (B → A) )</li>
+</ol>
+</section>
+<section id="ćwiczenia-do-teorii-mnogości" class="level3">
+<h3 class="anchored" data-anchor-id="ćwiczenia-do-teorii-mnogości">Ćwiczenia do <strong>teorii mnogości</strong>:</h3>
+<section id="operacje-na-zbiorach-1" class="level4">
+<h4 class="anchored" data-anchor-id="operacje-na-zbiorach-1">1. <strong>Operacje na zbiorach</strong></h4>
+<p>Dane są zbiory ( A = {1, 2, 3, 4} ), ( B = {3, 4, 5} ) oraz ( C = {2, 5, 6} ). Oblicz:</p>
+<ol type="a">
+<li><p>( A ∪ B )</p></li>
+<li><p>( A ∩ C )</p></li>
+<li><p>( A B )</p></li>
+<li><p>( B C )</p></li>
+</ol>
+</section>
+<section id="podzbiory-2" class="level4">
+<h4 class="anchored" data-anchor-id="podzbiory-2">2. <strong>Podzbiory</strong></h4>
+<p>Sprawdź, które z poniższych relacji są prawdziwe: a) ( {2, 3} A )</p>
+<ol start="2" type="a">
+<li><p>( {5, 6} C )</p></li>
+<li><p>( B A )</p></li>
+</ol>
+</section>
+<section id="zbiór-potęgowy-2" class="level4">
+<h4 class="anchored" data-anchor-id="zbiór-potęgowy-2">3. <strong>Zbiór potęgowy</strong></h4>
+<p>Zbiór ( X = {a, b} ). Znajdź zbiór potęgowy ( (X) ).</p>
+</section>
+<section id="relacje-i-iloczyn-kartezjański-1" class="level4">
+<h4 class="anchored" data-anchor-id="relacje-i-iloczyn-kartezjański-1">4. <strong>Relacje i iloczyn kartezjański</strong></h4>
+<p>Dane są zbiory ( A = {1, 2} ) oraz ( B = {a, b} ).</p>
+<ol type="a">
+<li><p>Znajdź iloczyn kartezjański ( A B ).</p></li>
+<li><p>Znajdź iloczyn kartezjański ( B A ).</p></li>
+<li><p>Czy ( A B = B A )?</p></li>
+</ol>
+</section>
+<section id="funkcje-i-obrazy-zbiorów-1" class="level4">
+<h4 class="anchored" data-anchor-id="funkcje-i-obrazy-zbiorów-1">5. <strong>Funkcje i obrazy zbiorów</strong></h4>
+<p>Dla funkcji ( f: A B ), gdzie ( A = {1, 2, 3} ) oraz ( B = {a, b, c, d} ), przypisano następujące wartości:</p>
+<ul>
+<li>( f(1) = a )</li>
+<li>( f(2) = c )</li>
+<li>( f(3) = b )</li>
+</ul>
+<ol type="a">
+<li><p>Znajdź obraz zbioru ( A ) pod działaniem funkcji ( f ).</p></li>
+<li><p>Czy ( f ) jest funkcją różnowartościową?</p></li>
+</ol>
+</section>
+</section>
+<section id="zadania-rachunku-predykatów-i-kwantyfikatorów" class="level3">
+<h3 class="anchored" data-anchor-id="zadania-rachunku-predykatów-i-kwantyfikatorów"><strong>Zadania rachunku predykatów i kwantyfikatorów</strong>:</h3>
+<section id="kwantyfikatory" class="level4">
+<h4 class="anchored" data-anchor-id="kwantyfikatory">1. <strong>Kwantyfikatory</strong></h4>
+<p>Przekształć poniższe zdania na wyrażenia logiczne z kwantyfikatorami:</p>
+<ol type="a">
+<li><p>„Każda liczba naturalna jest większa lub równa zero.”</p></li>
+<li><p>„Istnieje liczba, która jest podzielna przez 2 i 3.”</p></li>
+<li><p>„Dla każdej liczby rzeczywistej istnieje liczba większa od niej.”</p></li>
+</ol>
+</section>
+<section id="zadanie-na-zbiory-liczbowe" class="level4">
+<h4 class="anchored" data-anchor-id="zadanie-na-zbiory-liczbowe">2. <strong>Zadanie na zbiory liczbowe</strong></h4>
+<p>Udowodnij, że dla każdej liczby naturalnej ( n ), suma liczb od 1 do ( n ) wynosi ( ), używając indukcji matematycznej.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Skopiowano!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Skopiowano!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Wstęp</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./01_klasyczny_rachunek_zdań.html" class="pagination-link">
+        <span class="nav-page-text">Klasyczny Rachunek Zdań</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
