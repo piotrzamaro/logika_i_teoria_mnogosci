@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="mgr Piotr Zamaro">
-<meta name="author" content="Wydział Matematyki i Informatyki">
 
-<title>PODSTAWY LOGIKI I TEORII MNOGOŚCI</title>
+<title>ZAMAR|SPACE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./00_wprowadzenie.html" rel="next">
-<link href="./logo.png" rel="icon" type="image/png">
+<link href="./analiza_danych/analizy_przezycia.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,20 +59,19 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Zatwierdź"
   }
 }</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
-<meta name="twitter:title" content="PODSTAWY LOGIKI I TEORII MNOGOŚCI">
-<meta name="twitter:description" content="Praktyczne vademecum po metodach analitycznych stosowanych w HTA">
-<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">PODSTAWY LOGIKI I TEORII MNOGOŚCI</h1>
+      <h1 class="quarto-secondary-nav-title">ZAMAR|SPACE</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -86,34 +82,18 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">PODSTAWY LOGIKI I TEORII MNOGOŚCI</a> 
+      <a href="./">ZAMAR|SPACE</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/jjallaire/hopr/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="" title="Download" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-download"></i></a>
+    <a href="https://github.com/TwojProfilGitHub" title="" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/TwojProfilLinkedIn" title="" class="sidebar-tool px-1"><i class="bi bi-linkedin"></i></a>
+    <a href="https://github.com/quarto-dev/quarto-demo" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
     <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="./PODSTAWY-LOGIKI-I-TEORII-MNOGOŚCI.pdf">
-            <i class="bi bi-bi-file-pdf pe-1"></i>
-          Download PDF
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="./PODSTAWY-LOGIKI-I-TEORII-MNOGOŚCI.epub">
-            <i class="bi bi-bi-journal pe-1"></i>
-          Download ePub
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="./PODSTAWY-LOGIKI-I-TEORII-MNOGOŚCI.docx">
-            <i class="bi bi-bi-file-word pe-1"></i>
-          Download Docx
-          </a>
-        </li>
-    </ul>
-    <a href="" title="Share" id="sidebar-tool-dropdown-1" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
-    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-1">
         <li>
           <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
             <i class="bi bi-bi-twitter pe-1"></i>
@@ -139,22 +119,92 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Wstęp</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">ZAMAR|SPACE</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Analiza danych</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./00_wprowadzenie.html" class="sidebar-item-text sidebar-link">Wprowadzenie do logiki i teorii mnogości</a>
+  <a href="./analiza_danych/analizy_przezycia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Analizy przeżycia</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_klasyczny_rachunek_zdań.html" class="sidebar-item-text sidebar-link">Klasyczny Rachunek Zdań</a>
+  <a href="./analiza_danych/rekonstrukcja.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Rekonstrukcja danych o przeżyciu pacjentów</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">AI &amp; ML</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./uczenie_maszynowe/klasyfikatory.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Klasyfikatory przeżycia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./uczenie_maszynowe/nlp.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Przetwarzanie mowy naturalnej</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Aplikacje</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aplikacje/SURVIVAL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">SURVIVAL</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Edukacja</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./edukacja/logika.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Logika</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./edukacja/algebra.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Algebra liniowa i geometria analityczna</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./edukacja/matematyka.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Matematyka elementarna</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./kontakt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Kontakt</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -166,51 +216,21 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Spis treści</h2>
-   
-  <ul>
-  <li><a href="#wstęp" id="toc-wstęp" class="nav-link active" data-scroll-target="#wstęp">Wstęp</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">PODSTAWY LOGIKI I TEORII MNOGOŚCI</h1>
-<p class="subtitle lead">Praktyczne vademecum po metodach analitycznych stosowanych w HTA</p>
+<h1 class="title d-none d-lg-block">ZAMAR|SPACE</h1>
+<p class="subtitle lead">Hub Rzeczy Różnych</p>
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Autorzy</div>
-  <div class="quarto-title-meta-heading">Afiliacja</div>
-  
-    <div class="quarto-title-meta-contents">
-    mgr Piotr Zamaro 
-  </div>
-      <div class="quarto-title-meta-contents">
-    Wydział Matematyki i Informatyki 
-  </div>
-    <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            zamaro@outlook.com
-          </p>
-      </div>
-    </div>
 
 <div class="quarto-title-meta">
 
-      
-    <div>
-    <div class="quarto-title-meta-heading">Opublikowano</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
-    </div>
-  </div>
+    
   
     
   </div>
@@ -218,9 +238,20 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="wstęp" class="level1 unnumbered">
-<h1 class="unnumbered">Wstęp</h1>
-<p>e-book ten stanowi wprowadzenie do zagadnień z zakresu logiki matematycznej oraz teorii mnogości. Logika, będąca podstawą matematycznego rozumowania, pozwala analizować związki między zdaniami, formułować wnioski oraz rozwiązywać problemy za pomocą precyzyjnych narzędzi, takich jak rachunek zdań i kwantyfikatorów. Teoria mnogości z kolei opisuje struktury zbiorów, które są fundamentem współczesnej matematyki. Dokument ma na celu przystępne omówienie pojęć, technik i metod logicznych, z przykładami i ćwiczeniami, które pomogą w zrozumieniu tych abstrakcyjnych pojęć oraz ich zastosowań w praktyce.</p>
+<section id="wirtualna-przestrzeń-dla-pojektów-pisanych-do-szuflady-na-później.-enjoy" class="level1 unnumbered">
+<h1 class="unnumbered">Wirtualna przestrzeń dla pojektów pisanych do szuflady na później. Enjoy</h1>
+<p><br></p>
+<div class="welcome-content">
+<p>
+Witaj w <strong>ZAMARSPACE</strong> – mojej wirtualnej przestrzeni dedykowanej różnorodnym projektom programistycznym. Programuję w języku R, wykorzystując jego pełne możliwości, w tym framework <strong>Shiny</strong>, tworząc narzędzia analityczne dedykowane obszarowi farmacji i medycyny.
+</p>
+<p>
+Projekty prezentowane tutaj mogą zawierać błędy, niedociągnięcia składni czy słabe formatowanie, ponieważ zostały stworzone z myślą o własnych potrzebach i są ciągle rozwijane.
+</p>
+<p>
+Projekt jest <strong>open-source</strong>. Zapraszam do eksploracji moich zasobów, korzystania z aplikacji oraz materiałów edukacyjnych dostępnych na tej stronie. Jeśli masz pytania lub chciałbyś nawiązać współpracę, nie wahaj się skontaktować!
+</p>
+</div>
 
 
 </section>
@@ -363,8 +394,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./00_wprowadzenie.html" class="pagination-link">
-        <span class="nav-page-text">Wprowadzenie do logiki i teorii mnogości</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./analiza_danych/analizy_przezycia.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-title">Analizy przeżycia</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
